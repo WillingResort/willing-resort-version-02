@@ -24,4 +24,29 @@ p, li {
   font-weight: 300 !important;
 }
 
+/* Nav Bar CSS START */
+.sticky-nav-bar {
+  position: fixed;
+  top: -100px; 
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.5s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+      top: -100px; 
+      opacity: 0;
+  }
+  to {
+      top: 0; 
+      opacity: 1;
+  }
+}
+/* Nav Bar CSS END */
+
+
+
 
