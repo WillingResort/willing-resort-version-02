@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Navbar from "@/components/header";
 
 export const metadata: Metadata = {
   title: "Willing Resort",
@@ -15,13 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="relative">
-        <Header />
-        {children}
+      <head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
-        <footer>
-          footer
-        </footer>
+      </head>
+      <body className="relative">
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );

@@ -14,7 +14,7 @@ export default {
         borderColor:"#C5C2C2",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui"],
+        sans: ['"Times New Roman"', 'Times', 'serif'],
       },
       borderWidth: {
         '1.5': '1.5px', 
