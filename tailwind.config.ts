@@ -11,11 +11,18 @@ export default {
       colors: {
         background: "#F3EEE7",
         textColor: "#6B6B6B",
+        secondaryColor:"#303030",
         borderColor:"#C5C2C2",
       },
       fontFamily: {
         sans: ['"Times New Roman"', 'Times', 'serif'],
       },
+      fontSize: {
+        heading: ["24px", { lineHeight: "30px" }],
+      },
+      letterSpacing: {
+        heading: "0.05em",
+      },      
       borderWidth: {
         '1.5': '1.5px', 
       },

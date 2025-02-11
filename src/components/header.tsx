@@ -17,14 +17,14 @@ const Navbar: React.FC = () => {
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setIsSticky(window.scrollY > 100);
+        const handleScroll = () => setIsSticky(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     return (
         <nav
-            className={`z-10 w-full py-4 px-5 transition-all duration-300
+            className={`z-[999] w-full py-4 px-5 transition-all duration-300
                  ease-in-out fixed top-0 left-0 
                  ${isSticky ? 'bg-white shadow-lg sticky-nav-bar' :
                     'bg-transparent hover:bg-white group'
