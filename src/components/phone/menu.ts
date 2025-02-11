@@ -13,7 +13,7 @@ const menuItems = [
       label: "Resort Information",
       submenu: [
         { label: "Rooms", link: "/resort-information/rooms/" },
-        { label: "Dining", link: "/resort-information/dining/" }, // Fixed typo
+        { label: "Dining", link: "/resort-information/dining/" },
         { label: "Wellness", link: "/resort-information/wellness/" },
         { label: "In-house Events & Activities", link: "/resort-information/in-house-events-activities/" },
       ],

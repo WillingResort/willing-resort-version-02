@@ -22,21 +22,31 @@ const PhoneMenu: React.FC = () => {
     return (
         <div className='z-10'>
             {/* Open Menu Button */}
-            <button
-                className="flex gap-2 border-0 bg-transparent"
-                onClick={() => setIsOpen(true)}
-                aria-label="Open menu"
-            >
-                <div className="flex flex-col gap-1">
-                    {[...Array(3)].map((_, rowIdx) => (
-                        <div key={rowIdx} className="flex gap-1">
-                            {[...Array(3)].map((_, idx) => (
-                                <span key={idx} className="block w-2 h-2 bg-gray-800"></span>
-                            ))}
-                        </div>
-                    ))}
+            <div className='container mx-auto px-4 h-[50px] bg-white flex justify-between items-center'>
+                <div>
+                    <Link href="/" className="block">
+                        <img
+                            src="https://willingresort.github.io/assests-hosting/images/logo.png"
+                            alt="Logo"
+                            width={50}
+                            height={40}
+                            className="object-contain"
+                        />
+                    </Link>
                 </div>
-            </button>
+                <button
+                    className="flex gap-2 border-0 bg-transparent"
+                    onClick={() => setIsOpen(true)}
+                    aria-label="Open menu"
+                >
+                    <div className="text-textColor">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M21 6v2H3V6zM3 18h18v-2H3zm0-5h18v-2H3z" /></svg>
+                    </div>
+
+                </button>
+            </div>
+
+
 
             {/* Sidebar Menu */}
             <div
