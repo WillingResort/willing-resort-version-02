@@ -1,5 +1,12 @@
 import HeroSlider from "@/components/home/hero-slider";
 
+export async function generateMetadata() {
+  return {
+    title: "Home | Willing Resort",
+    description: "Welcome to Willing Resort, an enchanting getaway in central Bhutan.",
+  };
+}
+
 export default function HomePage() {
   return (
     <div>
@@ -9,7 +16,7 @@ export default function HomePage() {
       {/* Willing resort fact sheet */}
       <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px] mx-auto px-4 my-10">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">Willing Resort - Fact Sheet</h1>
+          <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">Willing Resort</h1>
           <div className="flex flex-col justify-center items-center">
             <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
               Willing Resort, nestled in Bhutan&apos;s eastern Himalayas, offers an authentic Bhutanese experience surrounded by majestic mountains and ancient monasteries. Trongsa, the ancestral home of Bhutan’s monarchy, boasts rich history with the iconic Trongsa Dzong. A blend of culture, nature, and modern comforts, this serene destination is the last Shangri-La.
@@ -24,7 +31,6 @@ export default function HomePage() {
       {/* Explore Willing Resort  */}
       <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]  mx-auto px-4 h-[100vh] bg-[url('https://willingresort.github.io/assests-hosting/images/explore-willing.jpg')] bg-cover bg-bottom flex flex-col justify-end relative">
         <div className="absolute top-0 left-0 w-full h-full bg-[#1c1a1a38]"></div>
-
         <div className="sm:p-[60px] md:p-[60px] lg:p-[60px] pb-5 relative z-10">
           <h1 className="font-normal text-heading tracking-heading text-white uppercase">Discover Our Resort</h1>
           <p className="w-[100%] sm:w-[50%] md:w-[50%] lg:w-[50%] !text-white mt-5">
@@ -196,9 +202,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-
-
-
 
       {/*  Video Section */}
       <div className="w-full mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]">

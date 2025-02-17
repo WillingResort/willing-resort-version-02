@@ -7,9 +7,6 @@
   --text-color: #6B6B6B;
 }
 
-* {
-  font-family:'"Times New Roman"', 'Times', 'serif' !important;
-}
 
 body {
   background-color: var(--background-color) !important;
@@ -22,7 +19,7 @@ p, li {
   color: var(--text-color) !important;
   line-height: 24.9px !important;
   font-weight: 400 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: 'Arial' !important;
 }
 
 /* Nav Bar CSS START */

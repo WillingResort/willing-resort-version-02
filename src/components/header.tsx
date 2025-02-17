@@ -1,23 +1,22 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Link from 'next/link';
 import React, { JSX, useEffect, useState } from 'react';
 
 const linkItems = [
-    { text: 'ACCOMMODATION', href: '#', hasIcon: true },
-    { text: 'DINING', href: '#', hasIcon: true },
-    { text: 'WELLNESS', href: '#', hasIcon: true },
-    { text: 'EXPERIENCES', href: '#', hasIcon: true },
-    { text: 'FESTIVALS', href: '#', hasIcon: true },
-    { text: 'ABOUT', href: '#', hasIcon: false },
+    { text: 'ACCOMMODATION', href: '/accommodation', hasIcon: true },
+    { text: 'DINING', href: '/dinning', hasIcon: true },
+    { text: 'WELLNESS', href: '/wellness', hasIcon: true },
+    { text: 'EXPERIENCES', href: '/experience', hasIcon: true },
+    { text: 'FESTIVALS', href: '/festivals', hasIcon: true },
+    { text: 'ABOUT', href: '/about', hasIcon: false },
 ];
 
 const Navbar: React.FC = () => {
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setIsSticky(window.scrollY > 50);
+        const handleScroll = () => setIsSticky(window.scrollY > 5);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);

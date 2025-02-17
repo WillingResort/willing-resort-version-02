@@ -15,13 +15,14 @@ export default {
         borderColor:"#C5C2C2",
       },
       fontFamily: {
-        sans: ['"Times New Roman"', 'Times', 'serif'],
+        sans: ['Times New Roman', 'Times', 'serif'],
+        body: ['Arial, Helvetica, sans-serif']
       },
       fontSize: {
         heading: ["24px", { lineHeight: "30px" }],
       },
       letterSpacing: {
-        heading: "0.05em",
+        heading: "5px",
       },      
       borderWidth: {
         '1.5': '1.5px', 

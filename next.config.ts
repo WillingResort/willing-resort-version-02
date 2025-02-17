@@ -1,8 +1,15 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  output :'export',
+  output: 'export',  // Static export configuration
+  reactStrictMode: true,  // Enable React Strict Mode for development
+  webpack(config) {
+    config.resolve.fallback = {
+      fs: false,
+      module: false,
+    };
+    return config;
+  },
 };
 
 export default nextConfig;
