@@ -1,8 +1,11 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',  // Static export configuration
-  reactStrictMode: true,  // Enable React Strict Mode for development
+  output: 'export', 
+  reactStrictMode: true, 
+  images: {
+    unoptimized: true,
+  },
   webpack(config) {
     config.resolve.fallback = {
       fs: false,

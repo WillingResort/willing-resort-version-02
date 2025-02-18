@@ -13,7 +13,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ heroBannerBgImage, headingText,
             style={{ backgroundImage: `url(${heroBannerBgImage})` }}
         >
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/50 to-transparent"></div>
-            <div className="container mx-auto pb-[100px] relative z-10">
+            <div className="container px-5 sm:px-0 mx-auto pb-[100px] relative z-10">
                 <h1 className="text-[26px] font-[500] leading-[32.5px] lg:w-[30%] tracking-heading text-white uppercase">
                     {headingText}
                 </h1>

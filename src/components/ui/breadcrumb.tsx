@@ -12,7 +12,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
     return (
-        <nav aria-label="breadcrumb" className="container px-5 py-10 mx-auto">
+        <nav aria-label="breadcrumb" className="container px-4 sm:px-[40px] md:px-[40px] lg:px-[70px] py-10 mx-auto">
             <ol className="flex space-x-2 text-sm">
                 <li>
                     <Link href="/" className="text-black text-[12px] font-[700]" style={{ fontFamily: "Arial" }}>
