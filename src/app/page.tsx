@@ -16,10 +16,13 @@ export default function HomePage() {
       {/* Willing resort fact sheet */}
       <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px] mx-auto px-4 my-10">
         <div className="flex flex-col gap-4 justify-center items-center">
-          <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">Willing Resort</h1>
+          <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
+            Experience the Heart of Bhutan in Trongsa
+          </h1>
           <div className="flex flex-col justify-center items-center">
             <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
-              Willing Resort, nestled in Bhutan&apos;s eastern Himalayas, offers an authentic Bhutanese experience surrounded by majestic mountains and ancient monasteries. Trongsa, the ancestral home of Bhutan’s monarchy, boasts rich history with the iconic Trongsa Dzong. A blend of culture, nature, and modern comforts, this serene destination is the last Shangri-La.
+              Nestled in the eastern Himalayas, Trongsa is a land of breathtaking landscapes, rich history, and deep spiritual heritage. As the ancestral home of Bhutan’s monarchy, it is home to the iconic Trongsa Dzong, a symbol of the nation’s unity under the Wangchuck dynasty.
+              Amidst pristine forests, meandering rivers, and traditional Bhutanese architecture, Willing Resort offers an authentic retreat where ancient wisdom meets modern comforts. Immerse yourself in Bhutan’s timeless traditions, reconnect with nature, and experience the essence of the last Shangri-La.
             </p>
           </div>
           <button className="outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
@@ -30,23 +33,26 @@ export default function HomePage() {
 
       {/* Explore Willing Resort  */}
       <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]  mx-auto px-4 h-[100vh] bg-[url('https://willingresort.github.io/assests-hosting/images/explore-willing.jpg')] bg-cover bg-bottom flex flex-col justify-end relative">
-        <div className="absolute top-0 left-0 w-full h-full bg-[#1c1a1a38]"></div>
-        <div className="sm:p-[60px] md:p-[60px] lg:p-[60px] pb-5 relative z-10">
-          <h1 className="font-normal text-heading tracking-heading text-white uppercase">Discover Our Resort</h1>
-          <p className="w-[100%] sm:w-[50%] md:w-[50%] lg:w-[50%] !text-white mt-5">
-            Explore the elegance and tranquility of Willing Resort, set in the historic village of Yueling. Enjoy luxurious accommodations, breathtaking views, and exceptional hospitality in the heart of Bhutan
-          </p>
-          <button className="outline outline-1 mt-5 outline-white px-[80px] py-[15px] uppercase text-white hover:text-black hover:bg-white hover:outline-none">
-            Explore
-          </button>
-        </div>
+      </div>
+      <div className="container mx-auto mt-8 flex flex-col items-center">
+        <h1 className="font-normal text-heading tracking-heading uppercase text-center">
+          The Story of Willing Resort
+        </h1>
+        <p className="w-[90%] mt-5 text-center">
+          Perched on a serene hilltop in the heart of Trongsa Valley, Willing Resort is a luxurious sanctuary where rustic charm meets modern elegance. Named after the ancient village of Yueling—where Lam Ngagi Wangchuk built the first meditation temple in 1543—our resort is deeply rooted in Bhutan’s spiritual heritage.
+          Just a 15-minute drive from the historic Trongsa Dzong and Ta Dzong museum, the resort offers breathtaking views of Trongsa’s iconic dzongs and the tranquil Mangdi River. Here, guests are welcomed with warm Bhutanese hospitality, ensuring a stay of comfort, peace, and rejuvenation.
+          Designed to blend traditional Bhutanese artistry with modern indulgence, Willing Resort is surrounded by lush gardens and stunning landscapes, offering a tranquil escape from the outside world. More than just a retreat, it is a place to restore balance—where nature, culture, and luxury come together to create a whole new experiences.
+        </p>
+        <button className="outline w-[300px] outline-1 mt-5 outline-black px-[80px] py-[15px] uppercase  hover:text-white hover:bg-black hover:outline-none">
+          Explore
+        </button>
       </div>
 
       {/* Our Suite Section */}
       <div className="container mt-5 sm:mt-[150px] mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
         <div className="flex flex-wrap w-full">
           <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px] h-[70vh]:">
-            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'top' }} src="https://willingresort.github.io/assests-hosting/images/rooms/deluxe-02.png" alt="" />
+            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'top' }} src="https://willingresort.github.io/assests-hosting/images/rooms/rooms.jpg" alt="" />
           </div>
           <div className="w-full sm:w-[30%] md:w-[30%] lg:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center">
             <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">

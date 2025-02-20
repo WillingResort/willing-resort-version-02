@@ -1,23 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import menuItems from './menu';
-
-interface MenuItem {
-    label: string;
-    link: string;
-    submenu?: { label: string; link: string }[];
-}
+import { menuItems } from './menu';
 
 const PhoneMenu: React.FC = () => {
-    const [activeIndex, setActiveIndex] = useState<number | null>(null);
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    const handleSubmenuToggle = (index: number) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
+    useEffect(() => {
+        document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+    }, [isOpen]);
 
     return (
         <div className='z-10'>
@@ -40,13 +33,12 @@ const PhoneMenu: React.FC = () => {
                     aria-label="Open menu"
                 >
                     <div className="text-textColor">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="currentColor" d="M21 6v2H3V6zM3 18h18v-2H3zm0-5h18v-2H3z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M21 6v2H3V6zM3 18h18v-2H3zm0-5h18v-2H3z" />
+                        </svg>
                     </div>
-
                 </button>
             </div>
-
-
 
             {/* Sidebar Menu */}
             <div
@@ -54,7 +46,7 @@ const PhoneMenu: React.FC = () => {
                     } transition-transform duration-300 ease-in-out`}
             >
                 {/* Header */}
-                <div className="flex items-center justify-between p-4 border-b">
+                <div className="flex items-center justify-between p-4">
                     <Link href="/" className="block">
                         <img
                             src="https://willingresort.github.io/assests-hosting/images/logo.png"
@@ -76,39 +68,20 @@ const PhoneMenu: React.FC = () => {
 
                 {/* Menu Items */}
                 <div className="p-4">
-                    <ul className="space-y-3">
-                        {menuItems.map((menuItem: MenuItem, idx: number) => (
-                            <li key={idx} className="relative">
-                                <div className="flex justify-between items-center">
-                                    <Link href={menuItem.link} className="text-gray-900 hover:text-blue-600 font-medium py-2">
-                                        {menuItem.label}
-                                    </Link>
-                                    {menuItem.submenu && (
-                                        <button
-                                            onClick={() => handleSubmenuToggle(idx)}
-                                            className="text-gray-700 text-lg"
-                                            aria-label="Toggle submenu"
-                                        >
-                                            {activeIndex === idx ? '−' : '+'}
-                                        </button>
-                                    )}
-                                </div>
-
-                                {/* Submenu */}
-                                {menuItem.submenu && (
-                                    <ul
-                                        className={`pl-4 mt-2 transition-all duration-300 ease-in-out ${activeIndex === idx ? 'block' : 'hidden'
-                                            }`}
-                                    >
-                                        {menuItem.submenu.map((subItem, subIdx) => (
-                                            <li key={subIdx} className="mb-2">
-                                                <Link href={subItem.link} className="text-gray-700 hover:text-blue-500">
-                                                    {subItem.label}
-                                                </Link>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                )}
+                    <ul>
+                        {menuItems.map((menuItem, idx) => (
+                            <li key={idx} className="py-2 flex items-center justify-between gap-2 border-t">
+                                <Link style={{ fontSize: '14px' }} href={menuItem.href} className="text-gray-900 hover:text-blue-600 font-medium py-2">
+                                    {menuItem.label}
+                                </Link>
+                                {menuItem.hasIcon &&
+                                    <span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
+                                            <defs>
+                                                <path id="weuiArrowOutlined0" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                                            </defs>
+                                            <use href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" /></svg>
+                                    </span>}
                             </li>
                         ))}
                     </ul>
