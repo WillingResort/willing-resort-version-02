@@ -85,10 +85,10 @@ const PhoneMenu: React.FC = () => {
                             <Link
                                 href={menuItem.href}
                                 key={idx}
-                                className="py-2 flex items-center justify-between gap-2 border-t"
+                                className="py-2 flex items-center justify-between gap-2 border-t text-black"
                                 onClick={handleMenuClick} // Close the menu when a link is clicked
                             >
-                                <span style={{ fontSize: '14px' }} className="text-gray-900 font-medium py-2">
+                                <span style={{ fontSize: '14px', fontWeight: '500' }} className="text-black py-2">
                                     {menuItem.label}
                                 </span>
                                 {menuItem.hasIcon &&

@@ -14,11 +14,11 @@ const WellnessPage: React.FC = () => {
         <React.Fragment>
             <HeroBanner
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/homepage/wellness.jpg'
-                headingText='Luxurious Accommodation at Willing Resort'
+                headingText='SPA Treatements'
                 bodyText={`
-                      Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern
-                        comfort. Stay in one of 16 elegant suites and soak in breathtaking views of
-                        Trongsa Dzong, mountains, and the Mangdi River.
+                        Our wellness sanctuary combines ancient Bhutanese traditions with 
+                        modern therapies. Set against the backdrop of natural mountain views, the spa offers a 
+                        complete journey of rejuvenation in a natural setting.
                     `}
             />
             <Breadcrumb

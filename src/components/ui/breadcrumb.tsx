@@ -22,7 +22,13 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
                 </li>
                 {items.map((item, index) => (
                     <li key={index} className={`${item.href ? "text-black" : "text-gray-500"} uppercase !text-[12px] !font-[700]`}>
-                        {item.href ? <Link href={item.href}>{item.label}</Link> : item.label}
+                        {item.href ? (
+                            <Link href={item.href} className="text-black">
+                                {item.label}
+                            </Link>
+                        ) : (
+                            <span className="text-gray-500">{item.label}</span>
+                        )}
                         {index < items.length - 1 && <span className="mx-2">›</span>}
                     </li>
                 ))}

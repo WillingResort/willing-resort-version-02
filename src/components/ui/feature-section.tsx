@@ -1,4 +1,7 @@
+'use client'
 import Image from 'next/image';
+import { useRouter } from 'next/navigation'
+
 
 interface FeatureSectionProps {
     title: string;
@@ -6,7 +9,7 @@ interface FeatureSectionProps {
     imageUrl: string;
     imagePosition?: 'left' | 'right';
     buttonText?: string;
-    buttonFunction?: () => void;
+    hrefLink?: string;
 }
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
@@ -15,8 +18,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     imageUrl,
     imagePosition = 'left',
     buttonText,
-    buttonFunction,
+    hrefLink,
 }) => {
+    const router = useRouter()
+
     return (
         <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
             <div className={`flex flex-wrap w-full ${imagePosition === 'right' ? 'flex-col-reverse sm:flex-row' : ''}`}>
@@ -39,9 +44,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                         {title}
                     </h1>
                     <p className="mt-5">{description}</p>
-                    {buttonText && (
+                    {buttonText && hrefLink && (
                         <button
-                            onClick={buttonFunction}
+                            onClick={() => router.push(hrefLink)}
                             className="mt-10 outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none"
                         >
                             {buttonText}
