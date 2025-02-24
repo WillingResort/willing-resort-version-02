@@ -81,7 +81,7 @@ const DinningPage: React.FC = () => {
 
             {/* Dinning Card Section */}
             <div className='container mx-auto mt-6 sm:mt-[100px] px-4 sm:p-0 md:p-0 mb-8 sm:mb-[100px]'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 p-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     <Card
                         imageSrc="https://willingresort.github.io/assests-hosting/images/dinning/dinning-02.jpg"
                         title="Dining Venues"
