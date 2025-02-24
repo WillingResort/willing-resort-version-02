@@ -5,5 +5,5 @@ export const menuItems = [
   { label: 'WELLNESS', href: '/wellness', hasIcon: true },
   { label: 'EXPERIENCES', href: '/experience', hasIcon: true },
   { label: 'FESTIVALS', href: '/festivals', hasIcon: true },
-  { label: 'ABOUT', href: '/about', hasIcon: false },
+  { label: 'ABOUT', href: '/about', hasIcon: true },
 ];

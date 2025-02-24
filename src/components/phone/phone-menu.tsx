@@ -12,8 +12,12 @@ const PhoneMenu: React.FC = () => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
     }, [isOpen]);
 
+    const handleMenuClick = () => {
+        setIsOpen(false);
+    };
+
     return (
-        <div className='z-10'>
+        <div className='relative z-10'>
             {/* Open Menu Button */}
             <div className='container mx-auto px-4 h-[50px] bg-white flex justify-between items-center'>
                 <div>
@@ -40,9 +44,17 @@ const PhoneMenu: React.FC = () => {
                 </button>
             </div>
 
+            {/* Overlay */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 bg-black opacity-20"
+                    onClick={handleMenuClick} // Close the menu when clicking outside
+                />
+            )}
+
             {/* Sidebar Menu */}
             <div
-                className={`fixed z-10 inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed z-20 inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300 ease-in-out`}
             >
                 {/* Header */}
@@ -68,12 +80,17 @@ const PhoneMenu: React.FC = () => {
 
                 {/* Menu Items */}
                 <div className="p-4">
-                    <ul>
+                    <div>
                         {menuItems.map((menuItem, idx) => (
-                            <li key={idx} className="py-2 flex items-center justify-between gap-2 border-t">
-                                <Link style={{ fontSize: '14px' }} href={menuItem.href} className="text-gray-900 hover:text-blue-600 font-medium py-2">
+                            <Link
+                                href={menuItem.href}
+                                key={idx}
+                                className="py-2 flex items-center justify-between gap-2 border-t"
+                                onClick={handleMenuClick} // Close the menu when a link is clicked
+                            >
+                                <span style={{ fontSize: '14px' }} className="text-gray-900 font-medium py-2">
                                     {menuItem.label}
-                                </Link>
+                                </span>
                                 {menuItem.hasIcon &&
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
@@ -82,9 +99,9 @@ const PhoneMenu: React.FC = () => {
                                             </defs>
                                             <use href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" /></svg>
                                     </span>}
-                            </li>
+                            </Link>
                         ))}
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
