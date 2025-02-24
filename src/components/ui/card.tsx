@@ -16,10 +16,10 @@ const Card: React.FC<CardProps> = ({ imageSrc, title, description }) => {
                 width={800}
                 height={500}
             />
-            <h2 className="font-normal pt-4 px-4 text-secondaryColor uppercase" style={{ fontWeight: 600 }}>
+            <h2 className="font-normal pt-4 sm:px-4 text-secondaryColor uppercase" style={{ fontWeight: 600 }}>
                 {title}
             </h2>
-            <p className="px-4">{description}</p>
+            <p className="sm:px-4">{description}</p>
         </div>
     );
 };
