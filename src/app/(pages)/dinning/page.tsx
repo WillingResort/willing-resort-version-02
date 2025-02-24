@@ -8,7 +8,7 @@ import React from 'react'
 export async function generateMetadata() {
     return {
         title: "Dinning | Willing Resort",
-        description: "Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern comfort.Stay in one of 16 elegant suites and soak in breathtaking views of Trongsa Dzong, mountains, and the Mangdi River.",
+        description: "Our dining spaces offer an exquisite blend of Bhutanese tradition and contemporary elegance, paired with breathtaking views of the Trongsa Valley and Mangdi River.",
     };
 }
 
