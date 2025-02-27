@@ -1,5 +1,4 @@
 import Breadcrumb from '@/components/ui/breadcrumb';
-import FeatureSection from '@/components/ui/feature-section';
 import HeroBanner from '@/components/ui/hero-banner';
 import TopTextSection from '@/components/ui/top-text-section';
 import React from 'react'

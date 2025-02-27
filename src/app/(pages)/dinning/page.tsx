@@ -1,6 +1,5 @@
 import Breadcrumb from '@/components/ui/breadcrumb';
 import Card from '@/components/ui/card';
-import FeatureSection from '@/components/ui/feature-section';
 import HeroBanner from '@/components/ui/hero-banner';
 import Image from 'next/image';
 import React from 'react'
