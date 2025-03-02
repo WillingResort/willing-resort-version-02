@@ -4,7 +4,7 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Festival | Willing Resort",
+        title: "Festival || Willing Resort",
         description: "Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern comfort.Stay in one of 16 elegant suites and soak in breathtaking views of Trongsa Dzong, mountains, and the Mangdi River.",
     };
 }
@@ -13,12 +13,12 @@ const FestivalPage: React.FC = () => {
     return (
         <React.Fragment>
             <HeroBanner
-                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_0604.jpeg'
-                headingText='Luxurious Accommodation at Willing Resort'
+                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_5418.jpeg'
+                headingText='Festivals in Trongsa'
                 bodyText={`
-                      Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern
-                        comfort. Stay in one of 16 elegant suites and soak in breathtaking views of
-                        Trongsa Dzong, mountains, and the Mangdi River.
+                        Immerse yourself in Bhutan’s rich heritage through vibrant festivals, 
+                        sacred rituals, and mesmerizing masked dances. Witness ancient traditions 
+                        come to life in Trongsa, the spiritual heart of the Himalayan kingdom.
                     `}
             />
             <Breadcrumb

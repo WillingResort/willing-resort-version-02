@@ -13,7 +13,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ heroBannerBgImage, headingText,
                 className="relative min-h-[70vh] bg-cover bg-center flex flex-col justify-end"
                 style={{ backgroundImage: `url(${heroBannerBgImage})`, backgroundRepeat: 'no-repeat' }}
             >
-                <div className="hidden sm:block absolute top-0 left-0 w-full h-full bg-gradient-to-b from-black/50 to-transparent"></div>
+                <div className="hidden sm:block absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/50 to-transparent"></div>
                 {/* Hide on small screens */}
                 <div className="container px-5 sm:px-0 mx-auto pb-[100px] relative z-10 hidden sm:block">
                     <h1 className="text-[26px] font-[500] leading-[32.5px] lg:w-[30%] tracking-heading text-white uppercase">

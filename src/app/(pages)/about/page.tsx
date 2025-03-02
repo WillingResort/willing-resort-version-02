@@ -4,22 +4,15 @@ import HeroBanner from '@/components/ui/hero-banner';
 import TopTextSection from '@/components/ui/top-text-section';
 import React from 'react'
 import Image from 'next/image';
+import TimelineItem from '@/components/ui/timeline-items';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 export async function generateMetadata() {
     return {
-        title: "About | Willing Resort",
+        title: "About || Willing Resort",
         description: "Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern comfort.Stay in one of 16 elegant suites and soak in breathtaking views of Trongsa Dzong, mountains, and the Mangdi River.",
     };
 }
-
-const items = [
-    { title: "Authentic Bhutanese Experience", content: "Immerse yourself in traditional Bhutanese artistry, perfectly paired with modern indulgence." },
-    { title: "Tranquil & Scenic Location", content: "Nestled amidst lush gardens, with panoramic views and serene landscapes." },
-    { title: "Luxury Meets Tradition", content: "Experience the warmth of Bhutanese hospitality, combined with world-class comfort." },
-    { title: "Escape. Reconnect. Experience.", content: "Book your stay at Willing Resort and discover Bhutan like never before." },
-];
-
-
 
 const AboutPage: React.FC = () => {
     return (
@@ -64,14 +57,33 @@ const AboutPage: React.FC = () => {
                         </div>
 
                         {/* Content Section */}
-                        <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6  flex flex-col justify-center items-center ">
+                        <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6  flex flex-col justify-center ">
                             <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
                                 Why Stay With Us?
                             </h1>
-                            <div className="space-y-1 mt-5">
-                                {items.map((item, index) => (
-                                    <Accordion key={index} title={item.title} content={item.content} />
-                                ))}
+                            <div className="mt-6">
+                                <TimelineItem
+                                    icon={
+                                        <Icon icon="emojione-monotone:flag-for-bhutan" width={20} />}
+                                    title="Authentic Bhutanese Experience"
+                                    description="Immerse yourself in traditional Bhutanese artistry, perfectly paired with modern indulgence."
+                                />
+                                <TimelineItem
+                                    icon={<Icon icon="mdi:map-marker-radius" width={20} />}
+                                    title="Tranquil & Scenic Location"
+                                    description="Nestled amidst lush gardens, with panoramic views and serene landscapes."
+                                />
+                                <TimelineItem
+                                    icon={<Icon icon="mdi:spa" width={20} />}
+                                    title="Luxury Meets Tradition"
+                                    description="Experience the warmth of Bhutanese hospitality, combined with world-class comfort."
+                                />
+                                <TimelineItem
+                                    icon={<Icon icon="mdi:campfire" width={20} />}
+                                    title="Escape. Reconnect. Experience."
+                                    description="Book your stay at Willing Resort and discover Bhutan like never before."
+                                />
+
                             </div>
                         </div>
                     </div>
