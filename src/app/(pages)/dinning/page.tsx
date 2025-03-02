@@ -1,12 +1,14 @@
 import Breadcrumb from '@/components/ui/breadcrumb';
 import Card from '@/components/ui/card';
+import FeatureSection from '@/components/ui/feature-section';
 import HeroBanner from '@/components/ui/hero-banner';
 import Image from 'next/image';
+import { title } from 'process';
 import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Dinning | Willing Resort",
+        title: "Dinning || Willing Resort",
         description: "Our dining spaces offer an exquisite blend of Bhutanese tradition and contemporary elegance, paired with breathtaking views of the Trongsa Valley and Mangdi River.",
     };
 }
@@ -80,7 +82,7 @@ const DinningPage: React.FC = () => {
 
             {/* Dinning Card Section */}
             <div className='container mx-auto mt-6 sm:mt-[100px] px-4 sm:p-0 md:p-0 mb-8 sm:mb-[100px]'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-[80px]">
                     <Card
                         imageSrc="https://willingresort.github.io/assests-hosting/images/dinning/dinning-02.jpg"
                         title="Dining Venues"
@@ -99,17 +101,38 @@ const DinningPage: React.FC = () => {
                          Willing Waterfall Café serves freshly brewed coffee, local teas, and artisanal juices beside a 
                          breathtaking 50-meter waterfall for a truly serene escape.`}
                     />
-                    <Card
-                        imageSrc="https://willingresort.github.io/assests-hosting/images/dinning/DSC_4007.jpg"
+                </div>
+                <div className="flex flex-col gap-2 mt-4 sm:mt-[80px]">
+                    <Image
+                        className="h-[500px] w-full object-cover object-center"
+                        src="https://willingresort.github.io/assests-hosting/images/dinning/DSC_4007.jpg"
+                        alt="Sip & Savor"
+                        width={800}
+                        height={500}
+                    />
+                    <h2 className="font-normal pt-4 sm:px-4 text-secondaryColor uppercase" style={{ fontWeight: 600 }}>
+                        Sip & Savor
+                    </h2>
+                    <p className="sm:px-4">
+                        Pair your meals with Bhutanese herbal teas, handcrafted cocktails, or fine wines.
+                        Savor a steaming cup of Suja (butter tea) or enjoy a classic international drink.
+                        Whether you prefer something traditional or contemporary, our bar and lounge offer
+                        a selection that caters to all tastes, enhancing your dining experience with every sip.
+                    </p>
+                </div>
+                {/* <div className='mt-6 sm:mt-[100px]'>
+                    <FeatureSection
                         title="Sip & Savor"
+                        imagePosition='right'
                         description={`
                             Pair your meals with Bhutanese herbal teas, handcrafted cocktails, or fine wines. 
                             Savor a steaming cup of Suja (butter tea) or enjoy a classic international drink. 
                             Whether you prefer something traditional or contemporary, our bar and lounge offer 
                             a selection that caters to all tastes, enhancing your dining experience with every sip.
-                            `}
+                        `}
+                        imageUrl="https://willingresort.github.io/assests-hosting/images/dinning/DSC_4007.jpg"
                     />
-                </div>
+                </div> */}
             </div>
         </React.Fragment>
     )
