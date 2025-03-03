@@ -2,7 +2,7 @@ import Breadcrumb from '@/components/ui/breadcrumb';
 import HeroBanner from '@/components/ui/hero-banner';
 import TopTextSection from '@/components/ui/top-text-section';
 import React from 'react'
-import FestivalsSection from './festival-section-card';
+import FestivalsSection from './components/festival-section-card';
 
 export async function generateMetadata() {
     return {
