@@ -1,11 +1,6 @@
-import Accordion from '@/components/ui/accordion';
 import Breadcrumb from '@/components/ui/breadcrumb';
 import HeroBanner from '@/components/ui/hero-banner';
-import TopTextSection from '@/components/ui/top-text-section';
 import React from 'react'
-import Image from 'next/image';
-import TimelineItem from '@/components/ui/timeline-items';
-import { Icon } from '@iconify/react/dist/iconify.js';
 import StorySection from './our-story';
 import WillingResortLocation from './location';
 

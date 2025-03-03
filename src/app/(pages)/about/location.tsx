@@ -7,7 +7,6 @@ function WillingResortLocation() {
         <div className='mt-6 sm:mt-[35px] mb-6 sm:mb-[100px]'>
             <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
                 <div className='flex flex-wrap w-full sm:flex-row'>
-                    {/* Image on the Left */}
                     <div className="w-full sm:w-[50%]">
                         <h1 className="font-normal text-heading text-secondaryColor capitalize">
                             By Road
@@ -41,7 +40,6 @@ function WillingResortLocation() {
                             />
                         </div>
                     </div>
-                    {/* Content Section */}
                     <div className="w-full sm:w-[50%]">
                         <h1 className="font-normal text-heading text-secondaryColor capitalize">
                             By Air
