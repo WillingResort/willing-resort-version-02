@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.willingbhutan.com
+
+# Sitemaps
+Sitemap: https://www.willingbhutan.com/sitemap.xml
