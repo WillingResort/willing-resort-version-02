@@ -7,7 +7,7 @@ import FestivalsSection from './festival-section-card';
 export async function generateMetadata() {
     return {
         title: "Festival || Willing Resort",
-        description: "Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern comfort.Stay in one of 16 elegant suites and soak in breathtaking views of Trongsa Dzong, mountains, and the Mangdi River.",
+        description: "Bhutan’s festivals, known as Tshechus and Drubchens, are vibrant expressions of faith, devotion, and community spirit. Trongsa, the spiritual heartland of Bhutan, hosts some of the kingdom’s most sacred festivals. From ancient masked dances at Trongsa Dzong to the community-driven Black Mountain Festival, each event offers a rare glimpse into Bhutan’s living heritage.",
     };
 }
 

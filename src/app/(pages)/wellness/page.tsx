@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export async function generateMetadata() {
     return {
-        title: "Wellness | Willing Resort",
+        title: "Wellness || Willing Resort",
         description: "Our wellness sanctuary combines ancient Bhutanese traditions with modern therapies. Set against the backdrop of natural mountain views, the spa offers a complete journey of rejuvenation in a natural setting.",
     };
 }

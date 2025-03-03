@@ -8,7 +8,7 @@ interface HeroBannerProps {
 
 const HeroBanner: React.FC<HeroBannerProps> = ({ heroBannerBgImage, headingText, bodyText }) => {
     return (
-        <>
+        <React.Fragment>
             <div
                 className="relative min-h-[70vh] bg-cover bg-center flex flex-col justify-end"
                 style={{ backgroundImage: `url(${heroBannerBgImage})`, backgroundRepeat: 'no-repeat' }}
@@ -34,7 +34,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ heroBannerBgImage, headingText,
                     {bodyText}
                 </p>
             </div>
-        </>
+        </React.Fragment>
     );
 };
 

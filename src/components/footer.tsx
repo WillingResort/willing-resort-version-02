@@ -4,17 +4,17 @@ import Link from 'next/link';
 
 const Footer = () => {
     const quickLinks1 = [
-        { label: 'Rooms', href: '/resort-Information/rooms/' },
-        { label: 'Dining', href: '/resort-Information/dinning/' },
-        { label: 'Our Destination', href: '/destination/location/' },
-        { label: 'Travel Information', href: '/destination/travel-information/' },
+        { label: 'Rooms', href: '/accommodation' },
+        { label: 'Dining', href: '/dinning' },
+        { label: 'Wellness', href: '/wellness' },
+        { label: 'Book Room', href: 'https://willingresortbooking.com' },
     ];
 
     const quickLinks2 = [
-        { label: 'About Us', href: '/about-us/' },
-        { label: 'Our Story', href: '/destination/introduction/' },
-        { label: 'Culture & Conservation', href: '/culture-and-conservations/' },
-        { label: 'Willing Waterfall Cafe', href: '/willing-waterfall-cafe/' },
+        { label: 'About Us', href: '/about' },
+        { label: 'Festival', href: '/festivals' },
+        { label: 'Culture & Conservation', href: 'festivals' },
+        { label: 'Willing Waterfall Cafe', href: '/waterfall-cafe' },
     ];
 
     const currentYear = new Date().getFullYear();

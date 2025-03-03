@@ -1,6 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-'use client'
+'use client';
+
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const slides = [
     { src: "https://willingresort.github.io/assests-hosting/homepage/slider-01.jpg", alt: "Slide 1" },
@@ -15,34 +17,47 @@ const slides = [
 const HeroSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Auto slide every 3 seconds
+    // Auto slide every 10 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+            setCurrentIndex((prevIndex) => {
+                const nextIndex = (prevIndex + 1) % slides.length;
+                console.log('Auto sliding to index:', nextIndex);  // Debugging log
+                return nextIndex;
+            });
         }, 10000);
 
         return () => clearInterval(interval);
     }, []);
-
 
     return (
         <div className="relative z-0 w-full h-[400px] md:h-[700px]">
             {/* Carousel Images */}
             <div className="relative w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (
-                    <div
+                    <motion.div
                         key={index}
-                        className={`absolute w-full h-full transition-all duration-1000 ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
-                            }`}
+                        className="absolute w-full h-full"
+                        initial={{ opacity: 0, scale: 1.1 }} // Initial state: fade out and slightly zoomed
+                        animate={{
+                            opacity: index === currentIndex ? 1 : 0,
+                            scale: index === currentIndex ? 1 : 1.06,
+                        }}
+                        exit={{ opacity: 0, scale: 1.1 }} // Fade and zoom out on exit
+                        transition={{
+                            opacity: { duration: 1 },
+                            scale: { type: 'spring', stiffness: 300, damping: 20 }, // Smooth spring animation for scaling
+                        }}
                     >
-                        <img
-                            loading="lazy"
-                            decoding="async"
+                        <Image
                             src={slide.src}
                             alt={slide.alt}
-                            className="w-full h-full object-cover"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                            quality={100}
+                            priority={index === 0}
                         />
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             {/* Carousel Indicators */}

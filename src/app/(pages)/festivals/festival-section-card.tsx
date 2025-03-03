@@ -6,56 +6,64 @@ interface Festival {
     date: string;
     description: string;
     image: string;
+    imagePosition?: string;
 }
+
+// List of festivals
+export const festivals: Festival[] = [
+    {
+        name: "Trongsa Tshechu",
+        date: "Lunar Month 11 | 5 Days",
+        imagePosition: 'left',
+        description:
+            "One of Bhutan’s most significant religious festivals, featuring Cham dances and blessings.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_0336.jpeg",
+    },
+    {
+        name: "Black Mountain Festival",
+        date: "October 5-6, 2024",
+        imagePosition: 'right',
+        description:
+            "A vibrant celebration of culture, food, and local crafts, with a 100km cycling challenge.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_5448.jpeg",
+    },
+    {
+        name: "Farmer’s Festival",
+        date: "November 8 (Annual Event)",
+        imagePosition: 'left',
+        description:
+            "A festival that promotes local agriculture, sustainable living, and Bhutanese farming traditions.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_6456.jpeg",
+    },
+    {
+        name: "Yeshey Goenpi Drubchen",
+        date: "Lunar Month 9, Dates 23-25",
+        imagePosition: 'right',
+        description:
+            "A powerful three-day Mahakala festival for purification and spiritual awakening.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_0322.jpeg",
+    },
+    {
+        name: "Pelden Lhamoi Drupchen",
+        date: "Lunar Month 12, Dates 23-25",
+        imagePosition: 'left',
+        description:
+            "A sacred festival dedicated to Pelden Lhamo, featuring traditional monk dances and rituals.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/wang.jpg",
+    },
+    {
+        name: "Yundrocholing Tshechu",
+        date: "Lunar Month 11, Dates 15-17",
+        imagePosition: 'right',
+        description:
+            "A historic festival at Yundrocholing Palace, preserving ancient spiritual dances.",
+        image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/trongsa-tsechu.jpg",
+    },
+];
 
 const FestivalsSection: React.FC = () => {
     const [selectedFestival, setSelectedFestival] = useState<Festival | null>(null);
 
-    // List of festivals
-    const festivals: Festival[] = [
-        {
-            name: "Trongsa Tshechu",
-            date: "Lunar Month 11 | 5 Days",
-            description:
-                "One of Bhutan’s most significant religious festivals, featuring Cham dances and blessings.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_0336.jpeg",
-        },
-        {
-            name: "Black Mountain Festival",
-            date: "October 5-6, 2024",
-            description:
-                "A vibrant celebration of culture, food, and local crafts, with a 100km cycling challenge.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_5448.jpeg",
-        },
-        {
-            name: "Farmer’s Festival",
-            date: "November 8 (Annual Event)",
-            description:
-                "A festival that promotes local agriculture, sustainable living, and Bhutanese farming traditions.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_6456.jpeg",
-        },
-        {
-            name: "Yeshey Goenpi Drubchen",
-            date: "Lunar Month 9, Dates 23-25",
-            description:
-                "A powerful three-day Mahakala festival for purification and spiritual awakening.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_0322.jpeg",
-        },
-        {
-            name: "Pelden Lhamoi Drupchen",
-            date: "Lunar Month 12, Dates 23-25",
-            description:
-                "A sacred festival dedicated to Pelden Lhamo, featuring traditional monk dances and rituals.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/wang.jpg",
-        },
-        {
-            name: "Yundrocholing Tshechu",
-            date: "Lunar Month 11, Dates 15-17",
-            description:
-                "A historic festival at Yundrocholing Palace, preserving ancient spiritual dances.",
-            image: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/trongsa-tsechu.jpg",
-        },
-    ];
 
     // Handle click outside modal to close it
     const handleClickOutside = (e: MouseEvent) => {

@@ -1,7 +1,5 @@
-"use client";
 import Navbar from "@/components/header";
 import PhoneMenu from "@/components/phone/phone-menu";
-import { AppProgressBar as ProgressBar } from "next-nprogress-bar";
 import React from "react";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
@@ -18,12 +16,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             </div>
 
             {children}
-            <ProgressBar
-                height="10px"
-                color="green"
-                options={{ showSpinner: false }}
-                shallowRouting
-            />
         </React.Fragment>
     );
 }

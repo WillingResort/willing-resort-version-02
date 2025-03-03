@@ -4,7 +4,7 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Not Found | Willing Resort",
+        title: "Not Found || Willing Resort",
     };
 }
 

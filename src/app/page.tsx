@@ -1,8 +1,10 @@
 import HeroSlider from "@/components/home/hero-slider";
+import WaterFallCafeCard from "@/components/home/waterfall-cafe-card";
+import FeatureSection from "@/components/ui/feature-section";
 
 export async function generateMetadata() {
   return {
-    title: "Home | Willing Resort",
+    title: "Home || Willing Resort",
     description: "Welcome to Willing Resort, an enchanting getaway in central Bhutan.",
   };
 }
@@ -49,41 +51,37 @@ export default function HomePage() {
       </div>
 
       {/* Our Suite Section */}
-      <div className="container mt-5 sm:mt-[150px] mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-        <div className="flex flex-wrap w-full">
-          <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px] h-[70vh]:">
-            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'top' }} src="https://willingresort.github.io/assests-hosting/images/rooms/rooms.jpg" alt="" />
-          </div>
-          <div className="w-full sm:w-[30%] md:w-[30%] lg:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center">
-            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
-              Scenic Suite Stay
-            </h1>
-            <p className="mt-5 text-center">
-              Escape to Willing Resort, where Bhutanese design meets modern comfort. Choose from three suites: Junior Suite, with mountain views; Deluxe Suite, featuring a balcony and soaking tub; or Luxury Cottage, offering a fireplace, spacious living, and breathtaking panoramas            </p>
-            <button className="outline mt-10 outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
-              Explore Our Suites
-            </button>
-          </div>
-        </div>
+      <div className='mt-6 sm:mt-[100px]'>
+        <FeatureSection
+          title="Scenic Suite Stay"
+          imagePosition='left'
+          description={`
+                  Escape to Willing Resort, where Bhutanese design meets modern comfort. Choose from 
+                  three suites: Junior Suite, with mountain views; Deluxe Suite, featuring a balcony 
+                  and soaking tub; or Luxury Cottage, offering a fireplace, spacious living, and breathtaking 
+                  panoramas
+                        `}
+          imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/rooms.jpg"
+          buttonText='Explore More'
+          hrefLink='/experience/singye-thang'
+        />
       </div>
 
       {/* Dinnining Experience */}
-      <div className="container mt-5 sm:mt-[150px]  mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-        <div className="flex flex-col-reverse  sm:flex-row flex-wrap w-full">
-          <div className="w-full sm:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center">
-            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
-              Authentic Bhutanese Dining
-            </h1>
-            <p className="mt-5 text-center">
-              Experience a delightful culinary journey at Willing Resort, where Bhutanese flavors blend with international cuisine. Enjoy stunning valley views while savoring signature dishes like our Blueberry Cake, made from wild local berries. Fresh, farm-to-table ingredients and cozy ambiance await.            </p>
-            <button className="outline mt-10 outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
-              Explore More
-            </button>
-          </div>
-          <div className="w-full sm:w-[70%] sm:pl-[60px]">
-            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'bottom' }} src="https://willingresort.github.io/assests-hosting/images/dinning/dinning.jpg" alt="" />
-          </div>
-        </div>
+      <div className='mt-6 sm:mt-[100px]'>
+        <FeatureSection
+          title="Authentic Bhutanese Dining"
+          imagePosition='right'
+          description={`
+                    Experience a delightful culinary journey at Willing Resort, where Bhutanese 
+                    flavors blend with international cuisine. Enjoy stunning valley views while 
+                    savoring signature dishes like our Blueberry Cake, made from wild local berries. 
+                    Fresh, farm-to-table ingredients and cozy ambiance await.
+                        `}
+          imageUrl="https://willingresort.github.io/assests-hosting/images/dinning/dinning.jpg"
+          buttonText='Explore More'
+          hrefLink='/experience/singye-thang'
+        />
       </div>
 
 
@@ -170,44 +168,25 @@ export default function HomePage() {
       </div>
 
       {/* Adventures & Activities */}
-      <div className="container mt-5 sm:mt-[150px] mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-        <div className="flex flex-wrap w-full">
-          <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px] h-[70vh]:">
-            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'top' }} src="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_5758.jpeg" alt="" />
-          </div>
-          <div className="w-full sm:w-[30%] md:w-[30%] lg:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center">
-            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
-              Adventures & Activities
-            </h1>
-            <p className="mt-5 text-center">
-              Embark on trails with stunning views, such as Singye Thang from Dorji Goenba, and experience the breathtaking beauty of Gangkar Phunsum and Semjee Village. Immerse yourself in the serene landscapes, captivating mountain vistas, and the tranquil charm of these picturesque destinations, offering a perfect escape into nature's splendor.
-            </p>
-            <button className="outline mt-10 outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
-              Explore More
-            </button>
-          </div>
-        </div>
+      <div className='mt-6 sm:mt-[100px]'>
+        <FeatureSection
+          title="Adventures & Activities"
+          imagePosition='left'
+          description={`
+                          Embark on trails with stunning views, such as Singye Thang from Dorji Goenba, 
+                          and experience the breathtaking beauty of Gangkar Phunsum and Semjee Village. 
+                          Immerse yourself in the serene landscapes, captivating mountain vistas, and the 
+                          tranquil charm of these picturesque destinations, offering a perfect escape into 
+                          nature's splendor.
+                        `}
+          imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_5758.jpeg"
+          buttonText='Explore More'
+          hrefLink='/experience/singye-thang'
+        />
       </div>
 
       {/* Willing Waterfall Cafe */}
-      <div className="container mt-5 sm:mt-[150px]  mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-        <div className="flex flex-col-reverse  sm:flex-row flex-wrap w-full">
-          <div className="w-full sm:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center">
-            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
-              Willing Waterfall Cafe
-            </h1>
-            <p className="mt-5 text-center">
-              Set against a breathtaking 50-meter waterfall, our café is a must-visit along Bhutan’s east-west highway. Just 15 minutes from Willing Resort, it offers fresh coffee, local teas, and light meals, providing a perfect stop between Trongsa and Bumthang
-            </p>
-            <button className="outline mt-10 outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
-              Explore More
-            </button>
-          </div>
-          <div className="w-full sm:w-[70%] sm:pl-[60px]">
-            <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'bottom' }} src="https://willingresort.github.io/assests-hosting/images/cafe/DSC_3633.jpg" alt="" />
-          </div>
-        </div>
-      </div>
+      <WaterFallCafeCard />
 
       {/*  Video Section */}
       <div className="w-full mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]">

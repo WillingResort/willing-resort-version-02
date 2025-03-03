@@ -68,12 +68,12 @@ const DinningPage: React.FC = () => {
                                 Scenic Dining at Willing Resort
                             </h1>
                             <p className="mt-5">
-                                Indulge in a dining experience like no other, where breathtaking mountain views meet
-                                exquisite cuisine. At Willing Resort, enjoy a leisurely breakfast or a gourmet meal in
-                                the fresh mountain air, surrounded by nature’s beauty. Savor locally inspired flavors,
-                                fresh fruits, and handcrafted beverages while taking in the serene landscape. Whether
-                                it’s a quiet morning coffee or a vibrant sunset dinner, every moment at our outdoor
-                                dining space is designed to delight your senses and create unforgettable memories.
+                                Our unique dining space, enriched by dramatic views of the valley and
+                                mountains, creates a captivating setting to savor seasonal delicacies.
+                                The cozy corner beside the fireplace offers a culinary haven, presenting
+                                delectable meals in a truly serene ambiance.
+                                In addition to our own home-made range of pastries, the blueberry cake is made
+                                from wild blueberries harvested above Willing Resort during the months of February and March.
                             </p>
                         </div>
                     </div>
@@ -83,24 +83,25 @@ const DinningPage: React.FC = () => {
             {/* Dinning Card Section */}
             <div className='container mx-auto mt-6 sm:mt-[100px] px-4 sm:p-0 md:p-0 mb-8 sm:mb-[100px]'>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-[80px]">
-                    <Card
-                        imageSrc="https://willingresort.github.io/assests-hosting/images/dinning/dinning-02.jpg"
-                        title="Dining Venues"
-                        description={`
+                    <div>
+                        <h2 className="font-normal pt-4 text-secondaryColor uppercase" style={{ fontWeight: 600 }}>Dining Venues</h2>
+                        <p className='mt-2'>
                             The Main Restaurant offers a cozy ambiance with valley views and a seasonally curated menu.
-                            The Fireplace Lounge provides a warm setting by the hearth, perfect for a comforting meal or evening drink. 
-                            For open-air dining, the Outdoor Terrace offers fresh mountain air and panoramic views, ideal for breakfast, 
-                            lunch, or a romantic candlelit dinner.`}
-                    />
-                    <Card
-                        imageSrc="https://willingresort.github.io/assests-hosting/images/dinning/dinning-01.JPG"
-                        title="Private Dining"
-                        description={`
-                         Enjoy a Private BBQ in the Woods, a secluded dining experience with a delicious barbecue feast. 
-                         Treehouse Dining offers a unique meal with stunning nature views. Just 15 minutes away, 
-                         Willing Waterfall Café serves freshly brewed coffee, local teas, and artisanal juices beside a 
-                         breathtaking 50-meter waterfall for a truly serene escape.`}
-                    />
+                            The Fireplace Lounge provides a warm setting by the hearth, perfect for a comforting meal or evening drink.
+                            For open-air dining, the Outdoor Terrace offers fresh mountain air and panoramic views, ideal for breakfast,
+                            lunch, or a romantic candlelit dinner.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 className="font-normal pt-4  text-secondaryColor uppercase" style={{ fontWeight: 600 }}>Private Dining</h2>
+                        <p className='mt-2'>
+                            Enjoy a Private BBQ in the Woods, a secluded dining experience with a delicious barbecue feast.
+                            Treehouse Dining offers a unique meal with stunning nature views. Just 15 minutes away,
+                            Willing Waterfall Café serves freshly brewed coffee, local teas, and artisanal juices beside a
+                            breathtaking 50-meter waterfall for a truly serene escape
+                        </p>
+
+                    </div>
                 </div>
                 <div className="flex flex-col gap-2 mt-4 sm:mt-[80px]">
                     <Image
@@ -120,19 +121,6 @@ const DinningPage: React.FC = () => {
                         a selection that caters to all tastes, enhancing your dining experience with every sip.
                     </p>
                 </div>
-                {/* <div className='mt-6 sm:mt-[100px]'>
-                    <FeatureSection
-                        title="Sip & Savor"
-                        imagePosition='right'
-                        description={`
-                            Pair your meals with Bhutanese herbal teas, handcrafted cocktails, or fine wines. 
-                            Savor a steaming cup of Suja (butter tea) or enjoy a classic international drink. 
-                            Whether you prefer something traditional or contemporary, our bar and lounge offer 
-                            a selection that caters to all tastes, enhancing your dining experience with every sip.
-                        `}
-                        imageUrl="https://willingresort.github.io/assests-hosting/images/dinning/DSC_4007.jpg"
-                    />
-                </div> */}
             </div>
         </React.Fragment>
     )
