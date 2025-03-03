@@ -6,6 +6,8 @@ import React from 'react'
 import Image from 'next/image';
 import TimelineItem from '@/components/ui/timeline-items';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import StorySection from './our-story';
+import WillingResortLocation from './location';
 
 export async function generateMetadata() {
     return {
@@ -31,64 +33,16 @@ const AboutPage: React.FC = () => {
                     { label: "About" },
                 ]}
             />
-            <TopTextSection
-                title="Our Story"
-                description={`
-                    Willing Resort is named after the ancient village of Yueling, where Lam Ngagi
-                    Wangchuk built the first meditation temple in 1543. The resort pays tribute to
-                    Bhutan’s rich heritage and natural beauty, blending rustic charm with modern 
-                    luxury. "Willing" reflects the village's name and conveys positivity. Spanning 
-                    4 acres with stunning views, the land was acquired in 2010 by proprietor Mr. 
-                    Pema Namgyel to create a luxury retreat honoring the area's historical significance.
-                    `}
-            />
-            <div className='mt-6 sm:mt-[100px] mb-6 sm:mb-[100px]'>
-                <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-                    <div className='flex flex-wrap w-full sm:flex-row'>
-                        {/* Image on the Left */}
-                        <div className="w-full sm:w-[60%] md:w-[60%] lg:w-[60%] sm:pr-[40px]">
-                            <Image
-                                className="h-[500px] lg:h-[650px] w-full object-cover object-center"
-                                src='https://willingresort.github.io/assests-hosting/images/dinning/dinning-03.JPG'
-                                alt='wellness'
-                                width={800}
-                                height={500}
-                            />
-                        </div>
-
-                        {/* Content Section */}
-                        <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6  flex flex-col justify-center ">
-                            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
-                                Why Stay With Us?
-                            </h1>
-                            <div className="mt-6">
-                                <TimelineItem
-                                    icon={
-                                        <Icon icon="emojione-monotone:flag-for-bhutan" width={20} />}
-                                    title="Authentic Bhutanese Experience"
-                                    description="Immerse yourself in traditional Bhutanese artistry, perfectly paired with modern indulgence."
-                                />
-                                <TimelineItem
-                                    icon={<Icon icon="mdi:map-marker-radius" width={20} />}
-                                    title="Tranquil & Scenic Location"
-                                    description="Nestled amidst lush gardens, with panoramic views and serene landscapes."
-                                />
-                                <TimelineItem
-                                    icon={<Icon icon="mdi:spa" width={20} />}
-                                    title="Luxury Meets Tradition"
-                                    description="Experience the warmth of Bhutanese hospitality, combined with world-class comfort."
-                                />
-                                <TimelineItem
-                                    icon={<Icon icon="mdi:campfire" width={20} />}
-                                    title="Escape. Reconnect. Experience."
-                                    description="Book your stay at Willing Resort and discover Bhutan like never before."
-                                />
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <StorySection />
+            <div className='container mt-4 sm:mt-[40px] mx-auto px-4'>
+                <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
+                    Location
+                </h1>
+                <p className='w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] mt-3'>
+                    Willing Resort enjoys a superior location in Trongsa valley. Trongsa sits at the crossroads connecting the eastern reaches to western Bhutan, making it an ideal base to explore the kingdom's iconic destinations.
+                </p>
             </div>
+            <WillingResortLocation />
         </React.Fragment>
     )
 }

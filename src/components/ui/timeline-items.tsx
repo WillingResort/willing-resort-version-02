@@ -2,7 +2,7 @@ import React from "react";
 
 interface TimelineItemProps {
     icon: React.ReactNode;
-    title: string;
+    title?: string;
     description: string;
 }
 
@@ -18,7 +18,9 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, description })
 
             {/* Content */}
             <div className="pb-2">
-                <h4 className="text-lg font-[600]">{title}</h4>
+                {title && (
+                    <h4 className="text-lg font-[600]">{title}</h4>
+                )}
                 <p className="text-gray-500">{description}</p>
             </div>
         </div>
