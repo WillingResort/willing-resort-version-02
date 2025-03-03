@@ -58,7 +58,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                 {imagePosition === 'right' && (
                     <div className="w-full sm:w-[70%] sm:pl-[60px]">
                         <Image
-                            className="h-[500px] w-full object-cover"
+                            className="h-[500px] w-full object-cover object-center"
                             src={imageUrl ?? '/default-image.jpg'}
                             alt={title}
                             width={800}
