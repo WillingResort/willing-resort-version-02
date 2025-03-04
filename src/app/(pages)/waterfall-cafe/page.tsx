@@ -20,7 +20,7 @@ const WaterFallCafe = () => {
                     { label: "Waterfall Cafe" },
                 ]}
             />
-            <div className='mt-6 sm:mt-[50px]'>
+            <div className='mt-4 sm:mt-[50px]'>
                 <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
                     <div className="flex flex-wrap w-full flex-col-reverse sm:flex-row">
                         {/* Image on the Left */}
