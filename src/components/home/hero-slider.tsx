@@ -66,7 +66,7 @@ const HeroSlider = () => {
                     <button
                         key={index}
                         onClick={() => setCurrentIndex(index)}
-                        className={`w-2 h-2 rounded-full ${index === currentIndex ? 'bg-white opacity-100' : 'border-1.5 border-white'} transition-opacity duration-300`}
+                        className={`w-8 h-1  ${index === currentIndex ? 'bg-white opacity-100' : 'border border-white'} transition-opacity duration-300`}
                         aria-label={`Slide ${index + 1}`}
                     />
                 ))}
