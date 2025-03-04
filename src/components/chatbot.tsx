@@ -29,7 +29,7 @@ declare global {
   }
 }
 
-const JotFormWidget: React.FC = () => {
+const ChatBotWidget: React.FC = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src = "https://cdn.jotfor.ms/s/umd/latest/for-embedded-agent.js";
@@ -39,17 +39,16 @@ const JotFormWidget: React.FC = () => {
     script.onload = () => {
       if (window.AgentInitializer) {
         window.AgentInitializer.init({
-          agentRenderURL:
-            "https://agent.jotform.com/0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
+          agentRenderURL: "https://agent.jotform.com/0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
           rootId: "JotformAgent-0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
           formID: "0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
-          queryParams: ["skipWelcome=1", "maximizable=1"],
+          queryParams: ["skipWelcome=10", "maximizable=10"],
           domain: "https://www.jotform.com",
           isDraggable: false,
-          background: "linear-gradient(180deg, #000000 0%, #f5a623 100%)",
+          background: "linear-gradient(180deg, #000000 0%, #000 100%)",
           buttonBackgroundColor: "#000000",
           buttonIconColor: "#FFFFFF",
-          variant: false,
+          variant: true,
           customizations: {
             greeting: "Yes",
             greetingMessage: "Hi! How can I assist you?",
@@ -58,7 +57,7 @@ const JotFormWidget: React.FC = () => {
             position: "right",
             autoOpenChatIn: "0",
           },
-          isVoice: false,
+          isVoice: true,
         });
       }
     };
@@ -71,4 +70,7 @@ const JotFormWidget: React.FC = () => {
   return null;
 };
 
-export default JotFormWidget;
+export default ChatBotWidget;
+
+
+
