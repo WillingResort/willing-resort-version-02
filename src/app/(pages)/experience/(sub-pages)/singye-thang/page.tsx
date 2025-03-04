@@ -14,11 +14,9 @@ const ExperiencePage: React.FC = () => {
         <React.Fragment>
             <HeroBanner
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/adventures-and-activities/place.jpg'
-                headingText='Unforgettable Moments, Timeless Memories'
+                headingText='Singye Thang (Lion’s ground) from Dorji Goenba'
                 bodyText={`
-                    Discover a world of cultural, spiritual, and adventure-filled experiences 
-                    at Willing Resort. Whether you seek serenity, exploration, or authentic Bhutanese traditions,
-                    our curated activities offer something special for every traveler.
+                    The hike from Dorji Goenba to Singye Thang (Lion’s Ground) spans approximately 4-5 hours, starting from an elevation of 2760 meters
                     `}
             />
             <Breadcrumb

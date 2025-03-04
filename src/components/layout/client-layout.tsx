@@ -12,7 +12,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             </div>
 
             {/* PhoneMenu shown on mobile screens */}
-            <div className="md:hidden">
+            <div className="md:hidden sticky top-0">
                 <PhoneMenu />
             </div>
 

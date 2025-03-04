@@ -42,7 +42,7 @@ const ChatBotWidget: React.FC = () => {
           agentRenderURL: "https://agent.jotform.com/0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
           rootId: "JotformAgent-0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
           formID: "0195619fe6f67dbe9d9b591f9c4adb2c4ef3",
-          queryParams: ["skipWelcome=10", "maximizable=10"],
+          queryParams: ["skipWelcome=1", "maximizable=1"],
           domain: "https://www.jotform.com",
           isDraggable: false,
           background: "linear-gradient(180deg, #000000 0%, #000 100%)",
@@ -51,7 +51,7 @@ const ChatBotWidget: React.FC = () => {
           variant: true,
           customizations: {
             greeting: "Yes",
-            greetingMessage: "Hi! How can I assist you?",
+            greetingMessage: "Hello! How can I assist you la?",
             openByDefault: "No",
             pulse: "Yes",
             position: "right",
