@@ -52,17 +52,22 @@ const WellnessPage: React.FC = () => {
                         </div>
 
                         {/* Content Section */}
-                        <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center text-center">
-                            <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
-                                Traditional Bhutanese Healing Ritual
+                        <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center ">
+                            <h1 className="font-normal text-center text-heading tracking-heading text-secondaryColor uppercase">
+                                SPA Treatments at Willing Resort
                             </h1>
                             <p className="mt-5">
-                                Relax and rejuvenate with our wellness experiences surrounded by nature. Enjoy a soothing
-                                sauna and steam bath, immersing yourself in the tranquility of the wilderness.
-                                Take a refreshing dip in our outdoor infinity pool, adorned with blooming rhododendrons
-                                in spring and misty clouds in summer. Experience the local hot stone bath,
-                                a unique and revitalizing traditional retreat.
+                                Our wellness sanctuary combines ancient Bhutanese traditions with modern therapies.
+                                Set against the backdrop of natural mountain views, the spa offers a complete journey
+                                of rejuvenation in a natural setting.
                             </p>
+                            <p className='italic pt-4 text-start'>Facilities: </p>
+                            <ul className='pt-2 list-disc pl-5 text-start'>
+                                <li>Sauna and Steam Bath: Indulge in our sauna and steam baths surrounded by nature and the wilderness.</li>
+                                <li>Outdoor Infinity Pool: Swim in the infinity pool, beautifully adorned with rhododendron flowers in spring and the swirling clouds above during summer.</li>
+                                <li>Local Hot Stone Bath: Experience the unique and rejuvenating local hot stone bath, a truly authentic escape.</li>
+                            </ul>
+                            <ul></ul>
                         </div>
                     </div>
                 </div>
