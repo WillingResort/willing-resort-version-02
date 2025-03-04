@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/footer";
 import ClientLayout from "@/components/layout/client-layout";
-import JotFormWidget from "@/components/chatbot";
 
 export const metadata: Metadata = {
   title: "Willing Resort",
@@ -23,7 +22,6 @@ export default function RootLayout({
       <body className="relative">
         <ClientLayout>{children}</ClientLayout>
         <Footer />
-        <JotFormWidget /> {/* Add JotForm Widget here */}
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
 import Navbar from "@/components/header";
 import PhoneMenu from "@/components/phone/phone-menu";
 import React from "react";
-import ChatBotWidget from "../chatbot";
+import ChatBotWidget from "../bot/chatbot";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     return (
