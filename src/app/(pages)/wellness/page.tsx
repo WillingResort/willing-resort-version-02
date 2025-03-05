@@ -16,12 +16,8 @@ const WellnessPage: React.FC = () => {
         <React.Fragment>
             <HeroBanner
                 heroBannerBgImage="https://willingresort.github.io/assests-hosting/images/wellness-01.jpeg"
-                headingText='SPA Treatements'
-                bodyText={`
-                        Our wellness sanctuary combines ancient Bhutanese traditions with 
-                        modern therapies. Set against the backdrop of natural mountain views, the spa offers a 
-                        complete journey of rejuvenation in a natural setting.
-                    `}
+                headingText=''
+                bodyText=''
             />
             <Breadcrumb
                 items={[
@@ -29,12 +25,11 @@ const WellnessPage: React.FC = () => {
                 ]}
             />
             <TopTextSection
-                title="Nature's Healing Instinct"
+                title="SPA Treatements"
                 description={`
-                        Make time for mind, body, and soul connection in the tranquil sanctuary 
-                        of the Willing Resort Spa Treatments. Championing holistic health, this is
-                        the destination for relaxation and recreation, wrapped in the wonders of Willing's
-                        expansive ecosystems.
+                        Our wellness sanctuary combines ancient Bhutanese traditions with 
+                        modern therapies. Set against the backdrop of natural mountain views, the spa offers a 
+                        complete journey of rejuvenation in a natural setting.
                     `}
             />
             <div className='mt-6 sm:mt-[100px] mb-6 sm:mb-[100px]'>
