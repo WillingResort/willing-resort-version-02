@@ -15,7 +15,7 @@ const WellnessPage: React.FC = () => {
     return (
         <React.Fragment>
             <HeroBanner
-                heroBannerBgImage="https://willingresort.github.io/assests-hosting/images/wellness-01.jpeg"
+                heroBannerBgImage="https://willingresort.github.io/assests-hosting/homepage/slider-04.jpg"
                 headingText=''
                 bodyText=''
             />
