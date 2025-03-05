@@ -60,7 +60,6 @@ const WellnessPage: React.FC = () => {
                             <ul className='pt-2 list-disc pl-5 text-start'>
                                 <li>Sauna and Steam Bath: Indulge in our sauna and steam baths surrounded by nature and the wilderness.</li>
                                 <li>Outdoor Infinity Pool: Swim in the infinity pool, beautifully adorned with rhododendron flowers in spring and the swirling clouds above during summer.</li>
-                                <li>Local Hot Stone Bath: Experience the unique and rejuvenating local hot stone bath, a truly authentic escape.</li>
                             </ul>
                             <ul></ul>
                         </div>
