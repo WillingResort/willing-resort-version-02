@@ -26,6 +26,7 @@ const ExperiencePage: React.FC = () => {
             <Breadcrumb
                 items={[
                     { label: "Experience" },
+                    { label: "Hiking" },
                 ]}
             />
             <TopTextSection
@@ -50,7 +51,7 @@ const ExperiencePage: React.FC = () => {
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3822.jpeg"
                     buttonText='Explore More'
-                    hrefLink='/experience/singye-thang'
+                    hrefLink='/experience/hiking/singye-thang'
                 />
             </div>
             <div className='mt-6 sm:mt-[100px]'>
@@ -64,7 +65,7 @@ const ExperiencePage: React.FC = () => {
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_9618.JPG"
                     buttonText='Explore More'
-                    hrefLink='/experience/resort-to-waterfall-cafe'
+                    hrefLink='/experience/hiking/resort-to-waterfall-cafe'
                 />
             </div>
             <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]  mx-auto px-4 h-[70vh] bg-[url('https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3164.jpeg')] bg-cover bg-bottom flex flex-col justify-end relative">
@@ -83,7 +84,7 @@ const ExperiencePage: React.FC = () => {
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/honey-bee-cliff.png"
                     buttonText='Explore More'
-                    hrefLink='/experience/honey-bee-cliff'
+                    hrefLink='/experience/hiking/honey-bee-cliff'
                 />
             </div>
             <div className='mt-6 sm:mt-[100px] mb-5 sm:mb-[100px]'>
@@ -98,7 +99,7 @@ const ExperiencePage: React.FC = () => {
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/homepage/slider-05.jpg"
                     buttonText='Explore More'
-                    hrefLink='/experience/mangdue-foot-trail'
+                    hrefLink='/experience/hiking/mangdue-foot-trail'
                 />
             </div>
 
