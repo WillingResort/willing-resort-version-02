@@ -29,10 +29,10 @@ const DinningPage: React.FC = () => {
                     { label: "Dinning" },
                 ]}
             />
-            <div className="container mt-5 mx-auto px-4">
+            {/* <div className="container mt-5 mx-auto px-4">
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <h1 className="font-normal w-[100%] sm:w-[50%] text-heading tracking-heading text-secondaryColor uppercase text-center">
-                        Authentic Bhutanese  & International Cuisine
+                        Dinning
                     </h1>
                     <div className="flex flex-col justify-center items-center">
                         <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
@@ -44,7 +44,7 @@ const DinningPage: React.FC = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className='mt-6 sm:mt-[100px]'>
                 <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
                     <div className='flex flex-wrap w-full sm:flex-row'>
@@ -62,13 +62,15 @@ const DinningPage: React.FC = () => {
                         {/* Content Section */}
                         <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center text-center">
                             <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
-                                Scenic Dining at Willing Resort
+                                Dining
                             </h1>
                             <p className="mt-5">
                                 Our unique dining space, enriched by dramatic views of the valley and
                                 mountains, creates a captivating setting to savor seasonal delicacies.
                                 The cozy corner beside the fireplace offers a culinary haven, presenting
                                 delectable meals in a truly serene ambiance.
+                            </p>
+                            <p className='mt-2'>
                                 In addition to our own home-made range of pastries, the blueberry cake is made
                                 from wild blueberries harvested above Willing Resort during the months of February and March.
                             </p>
@@ -79,7 +81,7 @@ const DinningPage: React.FC = () => {
 
             {/* Dinning Card Section */}
             <div className='container mx-auto mt-6 sm:mt-[100px] px-4 sm:p-0 md:p-0 mb-8 sm:mb-[100px]'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-[80px]">
+                {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 sm:gap-[80px]">
                     <div>
                         <h2 className="font-normal pt-4 text-secondaryColor uppercase" style={{ fontWeight: 600 }}>Dining Venues</h2>
                         <p className='mt-2'>
@@ -99,7 +101,7 @@ const DinningPage: React.FC = () => {
                         </p>
 
                     </div>
-                </div>
+                </div> */}
                 <div className="flex flex-col gap-2 mt-4 sm:mt-[80px]">
                     <Image
                         className="h-[500px] w-full object-cover object-center"

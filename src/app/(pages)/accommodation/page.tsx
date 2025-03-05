@@ -14,7 +14,7 @@ const AccomodationPage: React.FC = () => {
     return (
         <React.Fragment>
             <HeroBanner
-                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/rooms/luxury-01.jpg'
+                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/rooms/luxury-04.jpg'
                 headingText='Luxurious Accommodation at Willing Resort'
                 bodyText={`
                       Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern
@@ -65,7 +65,7 @@ const AccomodationPage: React.FC = () => {
                             take in the panoramic views of the valley and mountains, creating an intimate 
                             connection with Bhutan's natural beauty.
                         `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/deluxe-02.png"
+                    imageUrl="https://www.dropbox.com/s/5jbgx6iytyuvvu9/DSC_3789-Enhanced-NR.jpg?e=1&st=k17e9tq2&dl=0"
                 />
             </div>
 
@@ -80,7 +80,7 @@ const AccomodationPage: React.FC = () => {
                         Enhanced experience with the addition of a traditional wood-burning fireplace for 
                         cozy evenings.
                         `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/luxury-02.jpg"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/luxury-04.jpg"
                 />
             </div>
 
