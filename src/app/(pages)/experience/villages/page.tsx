@@ -5,7 +5,7 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Villages In Trongsa || Willing Resort",
+        title: "Visit to Villages || Willing Resort",
         description: "Discover the rich history and breathtaking landscapes of Trongsa. Visit ancient dzongs, royal palaces, sacred monasteries, and traditional villages to experience Bhutan’s cultural heritage. Plan your journey today!",
     };
 }
@@ -15,17 +15,16 @@ const ExperiencePage: React.FC = () => {
         <React.Fragment>
             <HeroBanner
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/dinning/dinning-03.JPG'
-                headingText='Villages In Trongsa'
+                headingText='Explore Villages In Trongsa'
                 bodyText={`
-                    Discover the rich history and breathtaking landscapes of Trongsa. 
-                    Visit ancient dzongs, royal palaces, sacred monasteries, and traditional 
-                    villages to experience Bhutan’s cultural heritage. Plan your journey today!
+                    The villages in Trongsa, each with its distinct history and cultural heritage, offer a 
+                    fascinating look into the region's spiritual and social traditions
                     `}
             />
             <Breadcrumb
                 items={[
                     { label: "Experience" },
-                    { label: "Place To visit" },
+                    { label: "Visit to villages" },
                 ]}
             />
             <div className='mt-6 sm:mt-[10px]'>

@@ -6,7 +6,7 @@ import React from 'react'
 export async function generateMetadata() {
     return {
         title: "Place To Visit Trongsa || Willing Resort",
-        description: "Discover the rich history and breathtaking landscapes of Trongsa. Visit ancient dzongs, royal palaces, sacred monasteries, and traditional villages to experience Bhutan’s cultural heritage. Plan your journey today!",
+        description: "Experience Bhutan’s rich culture at Willing Resort with oracle readings, Feng Shui, and traditional crafts, and explore Trongsa’s historic sites, including Trongsa Dzong, Ta Dzong Museum, and royal palaces",
     };
 }
 
@@ -15,17 +15,17 @@ const PlaceToVisitPage: React.FC = () => {
         <React.Fragment>
             <HeroBanner
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/dinning/dinning-03.JPG'
-                headingText='Places to visit In Trongsa'
+                headingText='Bhutan’s Spiritual & Cultural Wonders - Trongsa'
                 bodyText={`
-                    Discover the rich history and breathtaking landscapes of Trongsa. 
-                    Visit ancient dzongs, royal palaces, sacred monasteries, and traditional 
-                    villages to experience Bhutan’s cultural heritage. Plan your journey today!
+                    Experience Bhutan’s rich culture at Willing Resort with oracle readings, Feng Shui, 
+                    and traditional crafts, and explore Trongsa’s historic sites, including Trongsa Dzong, 
+                    Ta Dzong Museum, and royal palaces
                     `}
             />
             <Breadcrumb
                 items={[
                     { label: "Experience" },
-                    { label: "Place To visit" },
+                    { label: "other activities" },
                 ]}
             />
             <div className='mt-6 sm:mt-[10px]'>

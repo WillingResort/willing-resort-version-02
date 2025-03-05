@@ -7,7 +7,7 @@ import React from 'react'
 export async function generateMetadata() {
     return {
         title: "Experience || Willing Resort",
-        description: "Discover a world of cultural, spiritual, and adventure-filled experiences at Willing Resort. Whether you seek serenity, exploration, or authentic Bhutanese traditions, our curated activities offer something special for every traveler.",
+        description: "Discover a range of breathtaking hikes at Willing Resort, from family-friendly farm road trails to challenging mountain climbs. Experience Bhutan's natural beauty, rich culture, and historic sites",
     };
 }
 
@@ -18,9 +18,7 @@ const ExperiencePage: React.FC = () => {
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_5758.jpeg'
                 headingText='Unforgettable Moments, Timeless Memories'
                 bodyText={`
-                    Discover a world of cultural, spiritual, and adventure-filled experiences 
-                    at Willing Resort. Whether you seek serenity, exploration, or authentic Bhutanese traditions,
-                    our curated activities offer something special for every traveler.
+                    Discover a range of breathtaking hikes at Willing Resort, from family-friendly farm road trails to challenging mountain climbs. Experience Bhutan's natural beauty, rich culture, and historic sites
                     `}
             />
             <Breadcrumb
