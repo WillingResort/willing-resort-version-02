@@ -24,7 +24,7 @@ const ExperiencePage: React.FC = () => {
             />
             <Breadcrumb
                 items={[
-                    { label: "Experience" },
+                    { label: "Experience / Hiking", href: "/experience/hiking" },
                     { label: "singye-thang" }
                 ]}
             />
@@ -43,7 +43,7 @@ const ExperiencePage: React.FC = () => {
                         <h1 className='text-lg font-[600]'>Route Highlights:</h1>
                         <div className='mt-5'>
                             <TimelineItem
-                                icon={<Icon icon="gis:hiker" width={20} />}
+                                icon={<Icon icon="ph:person-simple-hike-fill" width={20} />}
                                 paddingBottom='pb-[20px]'
                                 description="Starting Point: Dorji Goenba"
                             />

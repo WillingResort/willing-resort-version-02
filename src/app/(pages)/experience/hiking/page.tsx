@@ -84,7 +84,7 @@ const ExperiencePage: React.FC = () => {
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_0983.jpeg"
                     buttonText='Explore More'
-                    hrefLink='/experience/hiking/honey-bee-cliff'
+                    hrefLink='/experience/hiking/trongsa-sightseeing'
                 />
             </div>
             <div className='mt-6 sm:mt-[100px] mb-5 '>
