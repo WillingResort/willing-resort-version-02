@@ -10,7 +10,7 @@ const HeroBanner: React.FC<HeroBannerProps> = ({ heroBannerBgImage, headingText,
     return (
         <React.Fragment>
             <div
-                className="relative min-h-[70vh] bg-cover bg-center flex flex-col justify-end"
+                className="relative min-h-[80vh] bg-cover bg-center flex flex-col justify-end"
                 style={{ backgroundImage: `url(${heroBannerBgImage})`, backgroundRepeat: 'no-repeat' }}
             >
                 <div className="hidden sm:block absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/50 to-transparent"></div>
