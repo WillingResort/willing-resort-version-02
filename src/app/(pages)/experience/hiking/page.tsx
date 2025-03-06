@@ -82,7 +82,7 @@ const ExperiencePage: React.FC = () => {
                     description={`
                         This rewarding trek near Trongsa climbs 930m to 3,410m, passing forests, sacred sites, and yak camps. Highlights include Dozhong Goemba, Singaythang’s lion-shaped rock, and stunning views of Gangkhar Puensum. Best visited in spring for flowers or autumn for clear skies.
                         `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/honey-bee-cliff.png"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_0983.jpeg"
                     buttonText='Explore More'
                     hrefLink='/experience/hiking/honey-bee-cliff'
                 />
