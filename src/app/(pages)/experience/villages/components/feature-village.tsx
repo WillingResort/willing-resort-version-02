@@ -1,6 +1,4 @@
-'use client'
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'
 
 
 interface FeatureVillageSectionProps {
@@ -8,8 +6,7 @@ interface FeatureVillageSectionProps {
     description: string;
     imageUrl: string;
     imagePosition?: 'left' | 'right';
-    buttonText?: string;
-    hrefLink?: string;
+
 }
 
 const FeatureVillageSection: React.FC<FeatureVillageSectionProps> = ({
@@ -17,10 +14,8 @@ const FeatureVillageSection: React.FC<FeatureVillageSectionProps> = ({
     description,
     imageUrl,
     imagePosition = 'left',
-    buttonText,
-    hrefLink,
+
 }) => {
-    const router = useRouter()
 
     return (
         <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
@@ -44,14 +39,6 @@ const FeatureVillageSection: React.FC<FeatureVillageSectionProps> = ({
                         {title}
                     </h1>
                     <p className="mt-5">{description}</p>
-                    {buttonText && hrefLink && (
-                        <button
-                            onClick={() => router.push(hrefLink)}
-                            className="mt-10 outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none"
-                        >
-                            {buttonText}
-                        </button>
-                    )}
                 </div>
 
                 {/* Image on the Right */}
