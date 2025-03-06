@@ -39,13 +39,10 @@ const ExperiencePage: React.FC = () => {
             />
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureSection
-                    title="Singye Thang (Lion’s ground) from Dorji Goenba"
+                    title="Singye Thang – Lion’s Ground"
                     imagePosition='right'
                     description={`
-                            The hike from Dorji Goenba to Singye Thang spans approximately 4-5 hours,
-                            starting from an elevation of 2760 meters. Historically, this trail was used by yak and
-                            cow herders, and by the Willing and Semjee villagers for transporting timber and shingles.
-                            It offers a rich blend of historical and natural experiences.
+                        The Singye Thang hike starts at Dorji Goenba (2760m) and ascends steeply to 3950m. Historically used by yak herders, it offers breathtaking views of Gangkar Phunsum. The trail features alpine flora and descends to Willing Resort. Ideal hiking months: October to April.
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3822.jpeg"
                     buttonText='Explore More'
@@ -54,7 +51,7 @@ const ExperiencePage: React.FC = () => {
             </div>
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureSection
-                    title="Hike to Lion’s Ground from Willing Resort"
+                    title="Singye Thang via Semjee Village"
                     imagePosition='left'
                     description={`
                             This hike is designed to be a more leisurely experience, suitable for 
@@ -66,26 +63,31 @@ const ExperiencePage: React.FC = () => {
                     hrefLink='/experience/hiking/resort-to-waterfall-cafe'
                 />
             </div>
-            <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]  mx-auto px-4 h-[70vh] bg-[url('https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3164.jpeg')] bg-cover bg-bottom flex flex-col justify-end relative">
+            <div className='mt-6 sm:mt-[100px]'>
+                <TopTextSection
+                    title="Short Adventure to Honey Bee Cliff (2 Hours)"
+                    description={`
+                    A brief but rewarding trek to a historic honey harvesting site. The impressive rocky cliff, 
+                    complete with natural waterfalls, still houses large honey bee nests. Until recently, local 
+                    villagers had harvested honey and wax here by suspending themselves from ropes. The honey 
+                    served medicinal purposes, while the wax was essential for candles, yarn weaving, and other 
+                    village needs.
+                    `}
+                />
             </div>
-
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureSection
-                    title="Adventures to Honey Bee Cliff (2 Hours)"
+                    title="Trongsa sightseeing - Taphey Goemba monastery hike"
                     imagePosition='right'
                     description={`
-                        Embark on an adventurous visit to the honeybee and wax harvesting cliffside, 
-                        offering breathtaking views of rocky cliffs and waterfalls. Once, local 
-                        villagers harvested honey and wax by hanging themselves with ropes. The honey 
-                        served medicinal purposes, while wax was used for candles, yarn, and domestic 
-                        needs. This unique site provides a fascinating glimpse into traditional, cultural practices.
+                        This rewarding trek near Trongsa climbs 930m to 3,410m, passing forests, sacred sites, and yak camps. Highlights include Dozhong Goemba, Singaythang’s lion-shaped rock, and stunning views of Gangkhar Puensum. Best visited in spring for flowers or autumn for clear skies.
                         `}
                     imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/honey-bee-cliff.png"
                     buttonText='Explore More'
                     hrefLink='/experience/hiking/honey-bee-cliff'
                 />
             </div>
-            <div className='mt-6 sm:mt-[100px] mb-5 sm:mb-[100px]'>
+            <div className='mt-6 sm:mt-[100px] mb-5 '>
                 <FeatureSection
                     title="Mangdue Foot Trail"
                     imagePosition='left'
@@ -99,6 +101,18 @@ const ExperiencePage: React.FC = () => {
                     buttonText='Explore More'
                     hrefLink='/experience/hiking/mangdue-foot-trail'
                 />
+            </div>
+            <div className="container mt-5 sm:mt-[100px] sm:mb-[100px] mx-auto px-4">
+                <div className="flex flex-col gap-4 justify-center items-center">
+                    <h1 className="font-normal w-[100%] sm:w-[50%] text-heading tracking-heading text-secondaryColor uppercase text-center">
+                        Willing Resort to Willing Waterfall Café
+                    </h1>
+                    <div className="flex flex-col justify-center items-center">
+                        <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
+                            A family-friendly hike following a farm road from Willing Resort to Semjee Village. Perfect for those seeking a gentle introduction to Bhutan's natural beauty and cultural heritage. The trail winds through dense forest with bird-watching opportunities, culminating at the scenic Willing Waterfall Café.
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </React.Fragment>

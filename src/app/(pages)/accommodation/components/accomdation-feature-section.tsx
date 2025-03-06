@@ -11,6 +11,8 @@ interface SuiteFeatureSectionProps {
     buttonText?: string;
     hrefLink?: string;
     area: string;
+    objectPosition?: 'object-center' | 'object-right' | 'object-left' | 'object-top' | 'object-bottom';
+    imageHeight?: string;
 }
 
 const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
@@ -20,7 +22,9 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
     imagePosition = 'left',
     buttonText,
     hrefLink,
-    area
+    area,
+    objectPosition = 'object-center',
+    imageHeight = '500px',
 }) => {
     const router = useRouter()
 
@@ -31,7 +35,7 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
                 {imagePosition === 'left' && (
                     <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px]">
                         <Image
-                            className="h-[500px] w-full object-cover"
+                            className={`h-[${imageHeight}] w-full object-cover  ${objectPosition}`}
                             src={imageUrl ?? '/default-image.jpg'}
                             alt={title}
                             width={800}
@@ -61,7 +65,7 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
                 {imagePosition === 'right' && (
                     <div className="w-full sm:w-[70%] sm:pl-[60px]">
                         <Image
-                            className="h-[500px] w-full object-cover object-center"
+                            className={`h-[${imageHeight}] w-full object-cover ${objectPosition}`}
                             src={imageUrl ?? '/default-image.jpg'}
                             alt={title}
                             width={800}

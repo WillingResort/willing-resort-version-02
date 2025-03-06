@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -17,9 +16,9 @@ const PhoneMenu: React.FC = () => {
     };
 
     return (
-        <div className='relative z-10'>
+        <div className='relative z-[9999]'>
             {/* Open Menu Button */}
-            <div className='container mx-auto px-4 h-[50px] bg-white flex justify-between items-center'>
+            <div className='container fixed top-0  mx-auto px-4 h-[70px] bg-white flex justify-between items-center'>
                 <div>
                     <Link href="/" className="block">
                         <img
@@ -54,7 +53,7 @@ const PhoneMenu: React.FC = () => {
 
             {/* Sidebar Menu */}
             <div
-                className={`fixed z-20 inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
+                className={`fixed z-[9999] inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
                     } transition-transform duration-300 ease-in-out`}
             >
                 {/* Header */}

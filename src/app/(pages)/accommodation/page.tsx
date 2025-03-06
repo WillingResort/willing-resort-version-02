@@ -14,7 +14,7 @@ const AccomodationPage: React.FC = () => {
     return (
         <React.Fragment>
             <HeroBanner
-                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/rooms/luxury-04.jpg'
+                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/rooms/luxury-01.jpg'
                 headingText='Luxurious Accommodation at Willing Resort'
                 bodyText={`
                       Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern
@@ -60,15 +60,16 @@ const AccomodationPage: React.FC = () => {
                     title="Deluxe Suite"
                     area='2 rooms 48 sqm 516 sq ft'
                     imagePosition='right'
+                    imageHeight='700px'
+                    objectPosition='object-center'
                     description={`
                             Private balconies feature outdoor soaking tubs, perfectly positioned to 
                             take in the panoramic views of the valley and mountains, creating an intimate 
                             connection with Bhutan's natural beauty.
                         `}
-                    imageUrl="https://www.dropbox.com/s/5jbgx6iytyuvvu9/DSC_3789-Enhanced-NR.jpg?e=1&st=k17e9tq2&dl=0"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/DSC_3789-Enhanced-NR.jpg"
                 />
             </div>
-
             <div className='mt-6 sm:mt-[100px] mb-6 sm:mb-[100px]'>
                 <SuiteFeatureSection
                     title="Luxury Suite"
