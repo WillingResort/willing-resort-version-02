@@ -60,7 +60,7 @@ const AccomodationPage: React.FC = () => {
                     title="Deluxe Suite"
                     area='2 rooms 48 sqm 516 sq ft'
                     imagePosition='right'
-                    imageHeight='700px'
+                    imageHeight='600px'
                     objectPosition='object-center'
                     description={`
                             Private balconies feature outdoor soaking tubs, perfectly positioned to 

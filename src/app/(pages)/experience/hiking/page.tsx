@@ -6,7 +6,7 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Experience || Willing Resort",
+        title: "Experience Hiking || Willing Resort",
         description: "Discover a range of breathtaking hikes at Willing Resort, from family-friendly farm road trails to challenging mountain climbs. Experience Bhutan's natural beauty, rich culture, and historic sites",
     };
 }
