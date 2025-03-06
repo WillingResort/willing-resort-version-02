@@ -5,7 +5,6 @@ import { useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { delay } from "framer-motion/dom";
 
 interface FeatureSectionProps {
     title: string;

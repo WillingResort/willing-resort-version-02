@@ -4,9 +4,10 @@ interface TimelineItemProps {
     icon: React.ReactNode;
     title?: string;
     description: string;
+    paddingBottom?: string;
 }
 
-const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, description }) => {
+const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, description, paddingBottom }) => {
     return (
         <div className="flex gap-x-3 relative">
             {/* Icon */}
@@ -21,7 +22,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, description })
                 {title && (
                     <h4 className="text-lg font-[600]">{title}</h4>
                 )}
-                <p className="text-gray-500">{description}</p>
+                <p className={`text-gray-500 ${paddingBottom ? paddingBottom : ''}`}>{description}</p>
             </div>
         </div>
     );
