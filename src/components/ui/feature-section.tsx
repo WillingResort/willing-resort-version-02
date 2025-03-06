@@ -1,7 +1,8 @@
 'use client'
 import Image from 'next/image';
 import { useRouter } from 'next/navigation'
-
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 interface FeatureSectionProps {
     title: string;
@@ -20,10 +21,20 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     buttonText,
     hrefLink,
 }) => {
+    const { ref, inView } = useInView({
+        triggerOnce: false, // Trigger only once
+        threshold: 0.2, // Trigger when 20% of the element is visible
+    });
+
     const router = useRouter()
 
     return (
-        <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
+        <motion.div
+            ref={ref}
+            initial={{ scale: 0.8, opacity: 0 }} // Start small and invisible
+            animate={{ scale: inView ? 1 : 0.8, opacity: inView ? 1 : 0 }} // Pop up and fade in when in view
+            transition={{ duration: 0.6 }} // Smooth transition
+            className="scroll-right-div container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
             <div className={`flex flex-wrap w-full ${imagePosition === 'right' ? 'flex-col-reverse sm:flex-row' : ''}`}>
                 {/* Image on the Left */}
                 {imagePosition === 'left' && (
@@ -67,7 +78,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                     </div>
                 )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

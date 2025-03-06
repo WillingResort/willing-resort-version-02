@@ -31,7 +31,7 @@ const HeroSlider = () => {
     }, []);
 
     return (
-        <div className="relative z-0 w-full h-[400px] md:h-[700px]">
+        <div className="relative z-0 w-full h-[80vh] md:h-[700px]">
             {/* Carousel Images */}
             <div className="relative w-full h-full overflow-hidden">
                 {slides.map((slide, index) => (

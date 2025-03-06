@@ -19,7 +19,7 @@ const WaterFallCafeCard = () => {
                     </button>
                 </div>
                 <div className="w-full sm:w-[70%] sm:pl-[60px]">
-                    <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'bottom' }} src="https://willingresort.github.io/assests-hosting/images/cafe/DSC_3633.jpg" alt="" />
+                    <img className="h-[500px] w-[100%]" style={{ objectFit: 'cover', objectPosition: 'bottom' }} src="https://willingresort.github.io/assests-hosting/images/cafe/DSC_3633.jpg" alt="water-fall image" />
                 </div>
             </div>
         </div>

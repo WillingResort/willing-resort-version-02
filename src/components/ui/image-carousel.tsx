@@ -22,7 +22,7 @@ const Carousel = () => {
 
   return (
     <div className="relative w-full">
-      <div className="flex justify-between items-center w-full h-[70vh] overflow-hidden">
+      <div className="flex justify-between items-center w-full h-[90vh] md:h-[70vh] overflow-hidden">
         {/* Left Image */}
         <div
           className="w-[25%] h-full transition-transform duration-500 ease-in-out"
