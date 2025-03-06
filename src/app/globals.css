@@ -25,17 +25,17 @@ p, li {
 /* Nav Bar CSS START */
 .sticky-nav-bar {
   position: fixed;
-  top: -100px; 
+  top: -150px; 
   left: 0;
   width: 100%;
   background: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: slideDown 0.5s ease-in-out forwards;
+  animation: slideDown 0.5s ease-in-out both;
 }
 
 @keyframes slideDown {
   from {
-      top: -100px; 
+      top: -150px; 
       opacity: 0;
   }
   to {
@@ -43,6 +43,8 @@ p, li {
       opacity: 1;
   }
 }
+
+
 /* Nav Bar CSS END */
 
 

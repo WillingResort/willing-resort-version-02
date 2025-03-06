@@ -1,14 +1,17 @@
-'use client'
-import Image from 'next/image';
-import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+"use client";
+
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { delay } from "framer-motion/dom";
 
 interface FeatureSectionProps {
     title: string;
     description: string;
     imageUrl: string;
-    imagePosition?: 'left' | 'right';
+    imagePosition?: "left" | "right";
     buttonText?: string;
     hrefLink?: string;
 }
@@ -17,40 +20,92 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     title,
     description,
     imageUrl,
-    imagePosition = 'left',
+    imagePosition = "left",
     buttonText,
     hrefLink,
 }) => {
+    const router = useRouter();
+
+    // Controls for animation
+    const controls = useAnimation();
     const { ref, inView } = useInView({
-        triggerOnce: false, // Trigger only once
-        threshold: 0.2, // Trigger when 20% of the element is visible
+        triggerOnce: false, // Allow reverse animation when scrolling back
+        threshold: 0.1, // Triggers when 80% of the element is visible
     });
 
-    const router = useRouter()
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        } else {
+            controls.start("hidden");
+        }
+    }, [inView, controls]);
+
+    // Animation Variants
+    const variants = {
+        hidden: (direction: "left" | "right") => ({
+            x: direction === "left" ? -100 : 100,
+            opacity: 0,
+            scale: 0.5,
+            transition: {
+                type: "spring",
+                stiffness: 80, // Less stiff for smoother movement
+                damping: 60, // Make it less bouncy
+                duration: 0.9, // Slightly longer duration
+                ease: "easeInOut", // Smooth ease in and out
+            },
+        }),
+        visible: {
+            x: 0,
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            transition: {
+                type: "spring",
+                stiffness: 80,
+                damping: 40,
+                duration: 0.9,
+                ease: "easeInOut",
+            },
+        },
+    };
 
     return (
-        <motion.div
+        <div
             ref={ref}
-            initial={{ scale: 0.8, opacity: 0 }} // Start small and invisible
-            animate={{ scale: inView ? 1 : 0.8, opacity: inView ? 1 : 0 }} // Pop up and fade in when in view
-            transition={{ duration: 0.6 }} // Smooth transition
-            className="scroll-right-div container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
-            <div className={`flex flex-wrap w-full ${imagePosition === 'right' ? 'flex-col-reverse sm:flex-row' : ''}`}>
+            className="scroll-right-div container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]"
+        >
+            <div
+                className={`flex flex-wrap w-full ${imagePosition === "right" ? "flex-col-reverse sm:flex-row" : ""
+                    }`}
+            >
                 {/* Image on the Left */}
-                {imagePosition === 'left' && (
-                    <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px]">
+                {imagePosition === "left" && (
+                    <motion.div
+                        custom="left"
+                        initial="hidden"
+                        animate={controls}
+                        variants={variants}
+                        className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px]"
+                    >
                         <Image
                             className="h-[500px] w-full object-cover"
-                            src={imageUrl ?? '/default-image.jpg'}
+                            src={imageUrl ?? "/default-image.jpg"}
                             alt={title}
                             width={800}
                             height={500}
                         />
-                    </div>
+                    </motion.div>
                 )}
 
                 {/* Content Section */}
-                <div className="w-full sm:w-[30%] md:w-[30%] lg:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center text-center">
+                <motion.div
+                    custom={imagePosition === "left" ? "right" : "left"}
+                    initial="hidden"
+                    animate={controls}
+                    variants={variants}
+                    className="w-full sm:w-[30%] md:w-[30%] lg:w-[30%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center items-center text-center"
+                >
                     <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
                         {title}
                     </h1>
@@ -63,22 +118,28 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                             {buttonText}
                         </button>
                     )}
-                </div>
+                </motion.div>
 
                 {/* Image on the Right */}
-                {imagePosition === 'right' && (
-                    <div className="w-full sm:w-[70%] sm:pl-[60px]">
+                {imagePosition === "right" && (
+                    <motion.div
+                        custom="right"
+                        initial="hidden"
+                        animate={controls}
+                        variants={variants}
+                        className="w-full sm:w-[70%] sm:pl-[60px]"
+                    >
                         <Image
                             className="h-[500px] w-full object-cover object-center"
-                            src={imageUrl ?? '/default-image.jpg'}
+                            src={imageUrl ?? "/default-image.jpg"}
                             alt={title}
                             width={800}
                             height={500}
                         />
-                    </div>
+                    </motion.div>
                 )}
             </div>
-        </motion.div>
+        </div>
     );
 };
 

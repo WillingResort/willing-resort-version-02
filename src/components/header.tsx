@@ -1,5 +1,5 @@
 'use client';
-
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React, { JSX, useEffect, useRef, useState } from 'react';
 
@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
             className={`z-[9999] w-full py-4 px-5 transition-all duration-300
                  ease-in-out fixed top-0 left-0 
                  ${isSticky ? 'bg-white shadow-lg sticky-nav-bar' :
-                    'bg-transparent hover:bg-white group'
+                    'bg-transparent hover:bg-white group nav-slide-up'
                 }`}
         >
             <div className="container mx-auto relative flex items-center 
@@ -137,21 +137,18 @@ const NavLinks: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
 
                     {/* Submenu Content */}
                     {link.subMenu && openSubMenuIndex === index && (
-                        <div
-                            className="absolute origin-top-left left-0 top-full mt-2 w-40 py-3 bg-white shadow-lg ring-black/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                            aria-orientation="vertical"
-                            aria-labelledby="menu-button"
+                        <motion.div
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="absolute left-0 top-full mt-2 w-40 py-3 bg-white shadow-lg ring-black/5"
                         >
                             {link.submenu?.map((sub, subIndex) => (
-                                <Link
-                                    key={subIndex}
-                                    href={sub.link}
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                >
+                                <Link key={subIndex} href={sub.link} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                                     {sub.label}
                                 </Link>
                             ))}
-                        </div>
+                        </motion.div>
                     )}
                 </div>
             ))}
