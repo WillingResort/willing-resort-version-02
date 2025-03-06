@@ -1,7 +1,8 @@
 import Breadcrumb from '@/components/ui/breadcrumb';
-import FeatureSection from '@/components/ui/feature-section';
 import HeroBanner from '@/components/ui/hero-banner';
 import React from 'react'
+import FeatureVillageSection from './components/feature-village';
+import TopTextSection from '@/components/ui/top-text-section';
 
 export async function generateMetadata() {
     return {
@@ -28,20 +29,18 @@ const ExperiencePage: React.FC = () => {
                 ]}
             />
             <div className='mt-6 sm:mt-[10px]'>
-                <FeatureSection
-                    title="Trongsa Dzong"
+                <FeatureVillageSection
+                    title="Dozhong village- Dozhong Goemba monastery"
                     imagePosition='left'
                     description={`
-                        Trongsa Dzong overlooks the rushing Mangde Chhu River and is considered the most impressive dzong in Bhutan. 
-                        Erected in 1644, its unique architecture stands out from a distance. The vast complex spans multiple levels and 
-                        features a maze of courtyards, passageways, and corridors. You’d be surprised to know that there are 25 temples in Trongsa Dzong!
+                        Dozhong village is about 15 km from Trongsa town. Here, you can visit Dozhong Goemba. "Dozhong" means "stone tub," referring to the bath used by the local female deity, Yulha Menmo Palden Dolma. This temple is linked to Lopen Tsultrim Tharchin, born in Tsangkha village in Tangsibi Gewog, Trongsa. He became a chopon (one with authority over offerings). 
                         `}
-                    imageUrl="https://live.staticflickr.com/4874/45712564602_5a993fb85d_b.jpg"
+                    imageUrl="https://ogop.bt/wp-content/uploads/2021/10/Khangma-Marp-Red-Rice2.jpeg"
                 />
             </div>
             <div className='mt-6 sm:mt-[100px]'>
-                <FeatureSection
-                    title="Trongsa Dzong"
+                <FeatureVillageSection
+                    title="Yuling village - Yuling Lhakhang"
                     imagePosition='right'
                     description={`
                         Initially built to protect Trongsa Dzong from rebels, this building now 
@@ -50,28 +49,53 @@ const ExperiencePage: React.FC = () => {
                         into the country's rich history. The museum's collections include a variety of objects, 
                         such as ancient diamonds and sculptures of deities, all elegantly displayed for viewing.
                         `}
-                    imageUrl="https://www.bhutanpeacefultour.com/wp-content/uploads/2019/02/Ta-Dzong-Bhutan-National-museum-at-Paro-the-old-capital-of-Bhutan.jpg"
+                    imageUrl="https://www.bhutantravelguru.com/wp-content/uploads/2022/01/paddy-field.jpg"
                 />
             </div>
             <div className='mt-6 sm:mt-[100px]'>
-                <FeatureSection
-                    title="Kinga Rabten"
+                <TopTextSection
+                    title="Nabji village - Nabji Lhakhang"
+                    description={`
+                        Nabji village is about two hours drive from Trongsa town. It is in a vast, verdant valley that resembles a natural concave circular mandala. Nabji's history dates back to Guru Rinpoche's first visit to Bhutan, during which he made King Nawoche of Assam, India, and King Sindhu Raja of Bumthang an oath to live in harmony. Nabji Lhakhang was built by Khandro Tashi Khyidren, daughter of King Sindhu Raja, with the help of Guru Rinpoche. A tree near the entrance is believed to be Guru Rinpoche's walking staff.
+                    `}
+                />
+            </div>
+            <div className='mt-6 sm:mt-[100px]'>
+                <FeatureVillageSection
+                    title="Korphu village - Korphu Lhakhang"
                     imagePosition='left'
                     description={`
-                        This is one of three royal homes in central Trongsa, which is situated at an elevation of roughly 1,750 meters above the Mangde Chhu river on the north side of the valley. It was built in 1929 as the second King's winter residence. The trip will give you an idea of what life was like in Bhutan's early kingdom. On the way, you'll pass beneath the fertile rice paddies of the lower Mangde Chhu valley, Takse Goemba, and a massive waterfall.
+                        This village is about 1.5 hours' walking from Nabji village. 'Korphu' is derived from 'gour' meaning stone and 'pho' meaning cave, literally translating to "stone cave." Korphu village is the farthest gewog in Trongsa Dzongkhag, falling under Jigme Singye Wangchuck National Park. Korphu Lhakhang in the village is said to have been constructed in the 15th century, after being prophesied by the great tertoen (treasure discoverer) Pema Lingpa.
                         `}
-                    imageUrl="https://www.bhutanpeacefultour.com/wp-content/uploads/2019/02/Ta-Dzong-Bhutan-National-museum-at-Paro-the-old-capital-of-Bhutan.jpg"
+                    imageUrl="https://static.wixstatic.com/media/118af4_a5eb8f7e19ca40e9b0021467e316723f~mv2.jpg/v1/fill/w_708,h_480,al_c,lg_1,q_80/118af4_a5eb8f7e19ca40e9b0021467e316723f~mv2.jpg"
+                />
+            </div>
+            <div className='mt-6 sm:mt-[100px] '>
+                <FeatureVillageSection
+                    title="Samcholing village - Samchoeling Palace"
+                    imagePosition='right'
+                    description={`
+                            The village is a 1.5-hour drive from Trongsa town along the highway. The origins of Samchoeling Palace are not entirely clear. Some believe the temple was initially built by a Lama from the Wangdu Choling family, while others attribute its construction to Jakar Dzongpon Chimi Dorji and his wife, Ashi Yeshe Chodren, the sister of the first King. They were known to spend their winters in this region. The palace features two chapels: the Dolma Lhakhang, which is used for performing daily rituals, and the Gonkhang, or chapel of the protective deities. This palace is also home to many sacred statues and paintings.
+                        `}
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/place.jpg"
                 />
             </div>
             <div className='mt-6 mb-6 sm:mt-[100px] sm:mb-[100px]'>
-                <FeatureSection
-                    title="Karma Drubdey Nunnery"
-                    imagePosition='right'
-                    description={`
-                        The nunnery was established in 1968 by the esteemed scholar, teacher, and yogi Khenpo Tsultrim Gyamtsho Rinpoche. It is now home to approximately 127 Buddhist nuns who study and practice Buddhadharma in the Karma Kagyu tradition. Located on a hill and surrounded by mountains, the nunnery benefits from plenty of fresh air, making it an ideal setting for the nuns to study and retreat.
-                        `}
-                    imageUrl="https://www.bhutanpeacefultour.com/wp-content/uploads/2019/02/Ta-Dzong-Bhutan-National-museum-at-Paro-the-old-capital-of-Bhutan.jpg"
-                />
+                <div className="container mt-5 mx-auto px-4">
+                    <div className="flex flex-col gap-4 justify-center items-center">
+                        <h1 className="font-normal w-[100%] sm:w-[50%] text-heading tracking-heading text-secondaryColor uppercase text-center">
+                            Nomadic Village
+                        </h1>
+                        <div className="flex flex-col justify-center items-center">
+                            <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
+                                You can take some time to visit the nomadic village of Monpas. The Monpa community in Trongsa is spread across three villages: Jangbi, Phumzur, and Wamling, with approximately 375 Monpas. They inhabit the Mangdue and Wangdue valleys in central Bhutan and are often considered some of the country's first inhabitants.
+                            </p>
+                            <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center pt-2">
+                                The Monpas are a close-knit community, living and working together in groups. They follow a joint family system, where the male head of the household typically makes family decisions. Traditionally, the Monpas wore a unique dress called the 'Pangay,' although this is now being replaced by the national dress. Their language, Monkha, is distinct and does not resemble any other language in Bhutan, though it shares roots with the Tibeto-Burman language family, similar to other languages spoken in the region.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
