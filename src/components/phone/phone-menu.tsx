@@ -6,6 +6,7 @@ import { menuItems } from './menu';
 
 const PhoneMenu: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
@@ -13,12 +14,17 @@ const PhoneMenu: React.FC = () => {
 
     const handleMenuClick = () => {
         setIsOpen(false);
+        setActiveSubMenu(null);
+    };
+
+    const toggleSubMenu = (label: string) => {
+        setActiveSubMenu(activeSubMenu === label ? null : label);
     };
 
     return (
         <div className='relative z-[9999]'>
             {/* Open Menu Button */}
-            <div className='container fixed top-0  mx-auto px-4 h-[70px] bg-white flex justify-between items-center'>
+            <div className='container fixed top-0 mx-auto px-4 h-[70px] bg-white flex justify-between items-center'>
                 <div>
                     <Link href="/" className="block">
                         <img
@@ -47,14 +53,13 @@ const PhoneMenu: React.FC = () => {
             {isOpen && (
                 <div
                     className="fixed inset-0 bg-black opacity-20"
-                    onClick={handleMenuClick} // Close the menu when clicking outside
+                    onClick={handleMenuClick}
                 />
             )}
 
             {/* Sidebar Menu */}
             <div
-                className={`fixed z-[9999] inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'
-                    } transition-transform duration-300 ease-in-out`}
+                className={`fixed z-[9999] inset-0 w-3/4 bg-white shadow-lg transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out`}
             >
                 {/* Header */}
                 <div className="flex items-center justify-between p-4">
@@ -70,7 +75,7 @@ const PhoneMenu: React.FC = () => {
                     <button
                         type="button"
                         className="text-gray-600 text-xl"
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleMenuClick}
                         aria-label="Close menu"
                     >
                         ✕
@@ -79,28 +84,62 @@ const PhoneMenu: React.FC = () => {
 
                 {/* Menu Items */}
                 <div className="p-4">
-                    <div>
-                        {menuItems.map((menuItem, idx) => (
-                            <Link
-                                href={menuItem.href}
-                                key={idx}
-                                className="py-2 flex items-center justify-between gap-2 border-t text-black"
-                                onClick={handleMenuClick} // Close the menu when a link is clicked
+                    {menuItems.map((menuItem, idx) => (
+                        <div key={idx} className="border-t">
+                            {/* Main Menu Item */}
+                            <div
+                                className="py-3 flex items-center justify-between gap-2 text-black cursor-pointer"
+                                onClick={() => {
+                                    if (menuItem.submenu) {
+                                        toggleSubMenu(menuItem.label);
+                                    } else {
+                                        handleMenuClick();
+                                    }
+                                }}
                             >
-                                <span style={{ fontSize: '14px', fontWeight: '500' }} className="text-black py-2">
+                                <Link href={menuItem.href} className="text-black font-medium text-sm">
                                     {menuItem.label}
-                                </span>
-                                {menuItem.hasIcon &&
+                                </Link>
+                                {menuItem.hasIcon && (
                                     <span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
-                                            <defs>
-                                                <path id="weuiArrowOutlined0" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
-                                            </defs>
-                                            <use href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" /></svg>
-                                    </span>}
-                            </Link>
-                        ))}
-                    </div>
+                                        {menuItem.submenu ? (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24"
+                                                className={`transition-transform ${activeSubMenu === menuItem.label ? 'rotate-90' : ''}`}
+                                            >
+                                                <defs>
+                                                    <path id="weuiArrowOutlined0" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                                                </defs>
+                                                <use href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" />                                            </svg>
+                                        ) : (
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="24" viewBox="0 0 12 24">
+                                                <defs>
+                                                    <path id="weuiArrowOutlined0" d="m7.588 12.43l-1.061 1.06L.748 7.713a.996.996 0 0 1 0-1.413L6.527.52l1.06 1.06l-5.424 5.425z" />
+                                                </defs>
+                                                <use href="#weuiArrowOutlined0" transform="rotate(-180 5.02 9.505)" />
+                                            </svg>
+                                        )}
+                                    </span>
+                                )}
+                            </div>
+
+                            {/* Submenu Items */}
+                            {menuItem.submenu && activeSubMenu === menuItem.label && (
+                                <div className="ml-4 border-l pl-4 pb-2">
+                                    {menuItem.subLabel?.map((subItem, subIdx) => (
+                                        <Link
+                                            key={subIdx}
+                                            href={subItem.href}
+                                            className="block py-2 text-sm text-gray-600"
+                                            onClick={handleMenuClick}
+                                        >
+                                            {subItem.label}
+                                        </Link>
+                                    ))}
+                                </div>
+                            )}
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
