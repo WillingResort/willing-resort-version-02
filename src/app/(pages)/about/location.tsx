@@ -11,7 +11,7 @@ function WillingResortLocation() {
                         <h1 className="font-normal text-heading text-secondaryColor capitalize">
                             By Road
                         </h1>
-                        <div className="mt-6">
+                        <div className="mt-2 sm:mt-6">
                             <TimelineItem
                                 icon={
                                     <Icon icon="ix:car-filled" width={20} />}
@@ -35,16 +35,16 @@ function WillingResortLocation() {
                             />
                             <TimelineItem
                                 icon={<Icon icon="ix:car-filled" width={20} />}
-                                title="Bumthang to Willing Resor"
+                                title="Bumthang to Willing Resort"
                                 description="2.5 hours"
                             />
                         </div>
                     </div>
-                    <div className="w-full sm:w-[50%]">
+                    <div className="w-full sm:w-[50%] mt-6 sm:mt-0">
                         <h1 className="font-normal text-heading text-secondaryColor capitalize">
                             By Air
                         </h1>
-                        <div className="mt-6">
+                        <div className="mt-2 sm:mt-6">
                             <TimelineItem
                                 icon={
                                     <Icon icon="mingcute:flight-takeoff-fill" width={20} />}

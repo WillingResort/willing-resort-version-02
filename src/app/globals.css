@@ -43,9 +43,24 @@ p, li {
       opacity: 1;
   }
 }
-
-
 /* Nav Bar CSS END */
+
+/* Start Media Query For Reponsize */
+@media (max-width:600px) {
+  h1,h2,h3,h4,h5,h6{
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.1rem !important;
+  }
+  p{
+    font-size: 14px !important;
+  }
+  img{
+    border-radius: 3px;
+  }
+}
+/* End Media Query For Reponsize */
+
 
 
 

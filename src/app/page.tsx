@@ -1,5 +1,6 @@
 import HeroSlider from "@/components/home/hero-slider";
 import WaterFallCafeCard from "@/components/home/waterfall-cafe-card";
+import Button from "@/components/ui/button";
 import FeatureSection from "@/components/ui/feature-section";
 
 export async function generateMetadata() {
@@ -16,7 +17,7 @@ export default function HomePage() {
       <HeroSlider />
 
       {/* Willing resort fact sheet */}
-      <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px] mx-auto px-4 my-10">
+      <div className="container mt-[40px] sm:mt-[100px] md:mt-[100px] lg:mt-[100px] mx-auto px-4 my-10">
         <div className="flex flex-col gap-4 justify-center items-center">
           <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
             Experience the Heart of Bhutan in Trongsa
@@ -27,9 +28,7 @@ export default function HomePage() {
               Amidst pristine forests, meandering rivers, and traditional Bhutanese architecture, Willing Resort offers an authentic retreat where ancient wisdom meets modern comforts. Immerse yourself in Bhutan’s timeless traditions, reconnect with nature, and experience the essence of the last Shangri-La.
             </p>
           </div>
-          <button className="outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none">
-            Explore More
-          </button>
+          <Button buttonText="Explore More" hrefLink="/experience/hiking" />
         </div>
       </div>
 
@@ -45,9 +44,7 @@ export default function HomePage() {
           Just a 15-minute drive from the historic Trongsa Dzong and Ta Dzong museum, the resort offers breathtaking views of Trongsa’s iconic dzongs and the tranquil Mangdi River. Here, guests are welcomed with warm Bhutanese hospitality, ensuring a stay of comfort, peace, and rejuvenation.
           Designed to blend traditional Bhutanese artistry with modern indulgence, Willing Resort is surrounded by lush gardens and stunning landscapes, offering a tranquil escape from the outside world. More than just a retreat, it is a place to restore balance—where nature, culture, and luxury come together to create a whole new experiences.
         </p>
-        <button className="outline w-[300px] outline-1 mt-5 outline-black px-[80px] py-[15px] uppercase  hover:text-white hover:bg-black hover:outline-none">
-          Explore
-        </button>
+        <Button buttonText="Explore More" hrefLink="/about" />
       </div>
 
       {/* Our Suite Section */}
@@ -63,7 +60,7 @@ export default function HomePage() {
                         `}
           imageUrl="https://willingresort.github.io/assests-hosting/images/rooms/rooms.jpg"
           buttonText='Explore More'
-          hrefLink='/experience/singye-thang'
+          hrefLink='/accommodation'
         />
       </div>
 
@@ -80,7 +77,7 @@ export default function HomePage() {
                         `}
           imageUrl="https://willingresort.github.io/assests-hosting/images/dinning/dinning.jpg"
           buttonText='Explore More'
-          hrefLink='/experience/singye-thang'
+          hrefLink='/dining'
         />
       </div>
 
@@ -181,7 +178,7 @@ export default function HomePage() {
                         `}
           imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_5758.jpeg"
           buttonText='Explore More'
-          hrefLink='/experience/singye-thang'
+          hrefLink='/experience/hiking'
         />
       </div>
 
@@ -192,7 +189,6 @@ export default function HomePage() {
       <div className="w-full mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]">
         <video className=" h-[90vh] object-cover" width="100%" autoPlay muted loop controls src="https://willingresort.github.io/assests-hosting/promotion.MOV"></video>
       </div>
-
     </div>
   );
 }

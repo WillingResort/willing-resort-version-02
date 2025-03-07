@@ -37,7 +37,7 @@ const HeroSlider = () => {
                 {slides.map((slide, index) => (
                     <motion.div
                         key={index}
-                        className="absolute w-full h-full"
+                        className="absolute w-full h-full bg-gradient-to-r from-black/50 to-transparent"
                         initial={{ opacity: 0, scale: 1.1 }} // Initial state: fade out and slightly zoomed
                         animate={{
                             opacity: index === currentIndex ? 1 : 0,

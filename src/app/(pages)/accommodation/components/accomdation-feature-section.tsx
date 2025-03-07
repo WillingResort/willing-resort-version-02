@@ -1,7 +1,6 @@
 'use client'
+import Button from '@/components/ui/button';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation'
-
 
 interface SuiteFeatureSectionProps {
     title: string;
@@ -26,7 +25,6 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
     objectPosition = 'object-center',
     imageHeight = '500px',
 }) => {
-    const router = useRouter()
 
     return (
         <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
@@ -35,7 +33,7 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
                 {imagePosition === 'left' && (
                     <div className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px]">
                         <Image
-                            className={`h-[${imageHeight}] w-full object-cover  ${objectPosition}`}
+                            className={`h-[${imageHeight}] w-full object-cover  ${objectPosition} bg-gradient-to-r from-black/50 to-transparent`}
                             src={imageUrl ?? '/default-image.jpg'}
                             alt={title}
                             width={800}
@@ -52,20 +50,15 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
                     <p>( {area} )</p>
                     <p className="mt-4">{description}</p>
                     {buttonText && hrefLink && (
-                        <button
-                            onClick={() => router.push(hrefLink)}
-                            className="mt-10 outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none"
-                        >
-                            {buttonText}
-                        </button>
+                        <Button buttonText={buttonText} hrefLink={hrefLink} />
                     )}
                 </div>
 
                 {/* Image on the Right */}
                 {imagePosition === 'right' && (
-                    <div className="w-full sm:w-[70%] sm:pl-[60px]">
+                    <div className="w-full sm:w-[70%] sm:pl-[60px">
                         <Image
-                            className={`h-[${imageHeight}] w-full object-cover ${objectPosition}`}
+                            className={`h-[${imageHeight}] w-full object-cover ${objectPosition} bg-gradient-to-r from-black/50 to-transparent`}
                             src={imageUrl ?? '/default-image.jpg'}
                             alt={title}
                             width={800}

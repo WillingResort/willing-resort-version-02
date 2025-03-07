@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { menuItems } from './menu';
+import { useRouter } from 'next/navigation';
 
 const PhoneMenu: React.FC = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null);
+    const router = useRouter()
 
     useEffect(() => {
         document.body.style.overflow = isOpen ? 'hidden' : 'auto';
@@ -16,6 +18,11 @@ const PhoneMenu: React.FC = () => {
         setIsOpen(false);
         setActiveSubMenu(null);
     };
+    const handleNavigate = (hrefLink: string) => {
+        router.push(hrefLink)
+        setIsOpen(false);
+        setActiveSubMenu(null);
+    }
 
     const toggleSubMenu = (label: string) => {
         setActiveSubMenu(activeSubMenu === label ? null : label);
@@ -93,7 +100,7 @@ const PhoneMenu: React.FC = () => {
                                     if (menuItem.submenu) {
                                         toggleSubMenu(menuItem.label);
                                     } else {
-                                        handleMenuClick();
+                                        handleNavigate(menuItem.href)
                                     }
                                 }}
                             >

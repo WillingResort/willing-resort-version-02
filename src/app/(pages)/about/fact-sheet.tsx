@@ -10,14 +10,14 @@ const WillingFactSheet: React.FC = () => {
                     <div className='flex flex-wrap w-full sm:flex-row'>
                         <div className="w-full sm:w-[55%] sm:pr-[50px]">
                             <Image
-                                className="h-[500px] w-full object-cover object-center"
+                                className="h-[500px] w-full object-cover object-center  bg-gradient-to-r from-black/50 to-transparent"
                                 src='https://willingresort.github.io/assests-hosting/homepage/slider-02.jpg'
                                 alt='willing resort building'
                                 width={800}
                                 height={500}
                             />
                         </div>
-                        <div className="w-full sm:w-[45%] flex flex-col justify-center items-start">
+                        <div className="w-full sm:w-[45%] flex flex-col justify-center items-start mt-6 sm:mt-0">
                             <h1 className="font-normal uppercase text-heading text-secondaryColor">
                                 Willing Resort - Fact Sheet
                             </h1>

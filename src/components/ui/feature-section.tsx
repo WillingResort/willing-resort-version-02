@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
+import Button from "./button";
 
 interface FeatureSectionProps {
     title: string;
@@ -23,7 +23,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
     buttonText,
     hrefLink,
 }) => {
-    const router = useRouter();
 
     // Controls for animation
     const controls = useAnimation();
@@ -88,7 +87,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                         className="w-full sm:w-[70%] md:w-[70%] lg:w-[70%] sm:pr-[60px]"
                     >
                         <Image
-                            className="h-[500px] w-full object-cover"
+                            className="h-[500px] w-full object-cover bg-gradient-to-r from-black/50 to-transparent"
                             src={imageUrl ?? "/default-image.jpg"}
                             alt={title}
                             width={800}
@@ -110,12 +109,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                     </h1>
                     <p className="mt-5">{description}</p>
                     {buttonText && hrefLink && (
-                        <button
-                            onClick={() => router.push(hrefLink)}
-                            className="mt-10 outline outline-1 outline-textColor px-6 py-2 uppercase text-secondaryColor hover:text-white hover:bg-secondaryColor hover:outline-none"
-                        >
-                            {buttonText}
-                        </button>
+                        <Button buttonText={buttonText} hrefLink={hrefLink} />
                     )}
                 </motion.div>
 
@@ -129,7 +123,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
                         className="w-full sm:w-[70%] sm:pl-[60px]"
                     >
                         <Image
-                            className="h-[500px] w-full object-cover object-center"
+                            className="h-[500px] w-full object-cover object-center bg-gradient-to-r from-black/50 to-transparent"
                             src={imageUrl ?? "/default-image.jpg"}
                             alt={title}
                             width={800}

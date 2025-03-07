@@ -20,7 +20,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, description, p
             {/* Content */}
             <div className="pb-2">
                 {title && (
-                    <h4 className="text-lg font-[600]">{title}</h4>
+                    <h4 className="text-lg !font-[500] sm:font-[600]">{title}</h4>
                 )}
                 <p className={`text-gray-500 ${paddingBottom ? paddingBottom : ''}`}>{description}</p>
             </div>

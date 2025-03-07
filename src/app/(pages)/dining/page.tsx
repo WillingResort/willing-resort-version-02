@@ -35,7 +35,7 @@ const DinningPage: React.FC = () => {
                         {/* Image on the Left */}
                         <div className="w-full sm:w-[60%] md:w-[60%] lg:w-[60%] sm:pr-[40px]">
                             <Image
-                                className="h-[500px] lg:h-[700px] w-full object-cover object-center"
+                                className="h-[500px] lg:h-[700px] w-full object-cover object-center  bg-gradient-to-r from-black/50 to-transparent"
                                 src='https://willingresort.github.io/assests-hosting/images/dinning/DSC_4043.jpg'
                                 alt='dinning image'
                                 width={800}
@@ -67,7 +67,7 @@ const DinningPage: React.FC = () => {
             <div className='container mx-auto mt-6 sm:mt-[100px] px-4 sm:p-0 md:p-0 mb-8 sm:mb-[100px]'>
                 <div className="flex flex-col gap-2 mt-4 sm:mt-[80px]">
                     <Image
-                        className="h-[600px] w-full object-cover object-center"
+                        className="h-[600px] w-full object-cover object-center  bg-gradient-to-r from-black/50 to-transparent"
                         src="https://willingresort.github.io/assests-hosting/images/dinning/DSC_4007.jpg"
                         alt="Sip & Savor"
                         width={800}

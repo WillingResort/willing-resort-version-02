@@ -1,5 +1,6 @@
 'use client'
 import TopTextSection from '@/components/ui/top-text-section';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
 
 const StorySection = () => {
@@ -37,9 +38,13 @@ const StorySection = () => {
                 </div>
             )}
             <div className="container mt-2 mx-auto px-4 flex justify-center items-center">
-                <button onClick={toggleExpansion} className="outline py-3 px-10 outline-1 mt-5 outline-black  uppercase  hover:text-white hover:bg-black hover:outline-none">
+                <motion.button onClick={toggleExpansion}
+                    className="outline px-8 h-[50px] outline-1 mt-5 outline-black uppercase text-[14px] sm:text-base"
+                    whileHover={{ scale: 1.1, backgroundColor: "black", color: "white", outline: "none" }}
+                    whileTap={{ scale: 0.9 }}
+                >
                     {isExpanded ? 'Read Less' : 'Read More'}
-                </button>
+                </motion.button>
             </div>
         </div >
     );
