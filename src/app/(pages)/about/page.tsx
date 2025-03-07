@@ -3,6 +3,7 @@ import HeroBanner from '@/components/ui/hero-banner';
 import React from 'react'
 import StorySection from './our-story';
 import WillingResortLocation from './location';
+import WillingFactSheet from './fact-sheet';
 
 export async function generateMetadata() {
     return {
@@ -29,6 +30,7 @@ const AboutPage: React.FC = () => {
                 ]}
             />
             <StorySection />
+            <WillingFactSheet />
             <div className='container mt-4 sm:mt-[40px] mx-auto px-4'>
                 <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase">
                     Location

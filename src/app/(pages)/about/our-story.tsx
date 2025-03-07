@@ -1,6 +1,5 @@
 'use client'
 import TopTextSection from '@/components/ui/top-text-section';
-import { div } from 'framer-motion/client';
 import { useState } from 'react';
 
 const StorySection = () => {
