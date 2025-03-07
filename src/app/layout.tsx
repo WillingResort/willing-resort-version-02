@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/footer";
 import ClientLayout from "@/components/layout/client-layout";
 
 export const metadata: Metadata = {
@@ -21,7 +20,6 @@ export default function RootLayout({
       </head>
       <body className="relative">
         <ClientLayout>{children}</ClientLayout>
-        <Footer />
       </body>
     </html>
   );

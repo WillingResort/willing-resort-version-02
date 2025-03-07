@@ -1,5 +1,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On 
+
+    # If a file with .html exists, rewrite the request to serve the file
     RewriteCond %{REQUEST_FILENAME}.html -f 
-    RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L] 
-</IfModule> 
+    RewriteRule !.*\.html$ %{REQUEST_FILENAME}.html [L]
+
+    # Custom 404 fallback (Optional)
+    ErrorDocument 404 /404.html
+</IfModule>
