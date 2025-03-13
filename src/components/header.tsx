@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
     const [isSticky, setIsSticky] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => setIsSticky(window.scrollY > 5);
+        const handleScroll = () => setIsSticky(window.scrollY > 10);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -112,7 +112,7 @@ const NavLinks: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
                     {!link.subMenu && (
                         <Link
                             href={link.href}
-                            className={`text-sm font-normal hover:text-black transition-colors duration-300 relative ${isSticky ? "text-textColor" : "text-white group-hover:text-textColor"
+                            className={`text-sm font-normal hover:!text-black transition-colors duration-300 relative ${isSticky ? "text-textColor" : "text-white group-hover:text-textColor"
                                 } ${link.hasIcon
                                     ? `before:content-[''] before:absolute before:top-[45%] before:right-[-15px] before:w-[4px] before:h-[4px] before:rounded-full ${isSticky ? "before:bg-textColor" : "before:bg-white group-hover:before:bg-textColor"
                                     }`
@@ -126,7 +126,7 @@ const NavLinks: React.FC<{ isSticky: boolean }> = ({ isSticky }) => {
                     {link.subMenu && (
                         <button
                             onClick={() => handleSubMenuToggle(index)} // Toggle submenu for this specific item
-                            className={`text-sm font-normal hover:text-black transition-colors duration-300 relative ${isSticky ? "text-textColor" : "text-white group-hover:text-textColor"
+                            className={`text-sm font-normal hover:!text-black transition-colors duration-300 relative ${isSticky ? "text-textColor" : "text-white group-hover:text-textColor"
                                 } ${link.hasIcon
                                     ? `before:content-[''] before:absolute before:top-[45%] before:right-[-15px] before:w-[4px] before:h-[4px] before:rounded-full ${isSticky ? "before:bg-textColor" : "before:bg-white group-hover:before:bg-textColor"
                                     }`

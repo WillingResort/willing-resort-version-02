@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import Image from 'next/image';
 
 const slides = [
@@ -17,15 +17,14 @@ const slides = [
 const HeroSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Auto slide every 10 seconds
+    // Auto slide every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => {
                 const nextIndex = (prevIndex + 1) % slides.length;
-                console.log('Auto sliding to index:', nextIndex);  // Debugging log
                 return nextIndex;
             });
-        }, 10000);
+        }, 5000);
 
         return () => clearInterval(interval);
     }, []);
@@ -34,32 +33,35 @@ const HeroSlider = () => {
         <div className="relative z-0 w-full h-[80vh] md:h-[700px]">
             {/* Carousel Images */}
             <div className="relative w-full h-full overflow-hidden">
-                {slides.map((slide, index) => (
-                    <motion.div
-                        key={index}
-                        className="absolute w-full h-full bg-gradient-to-r from-black/50 to-transparent"
-                        initial={{ opacity: 0, scale: 1.1 }} // Initial state: fade out and slightly zoomed
-                        animate={{
-                            opacity: index === currentIndex ? 1 : 0,
-                            scale: index === currentIndex ? 1 : 1.06,
-                        }}
-                        exit={{ opacity: 0, scale: 1.1 }} // Fade and zoom out on exit
-                        transition={{
-                            opacity: { duration: 1 },
-                            scale: { type: 'spring', stiffness: 300, damping: 20 }, // Smooth spring animation for scaling
-                        }}
-                    >
-                        <Image
-                            src={slide.src}
-                            alt={slide.alt}
-                            fill
-                            style={{ objectFit: 'cover' }}
-                            quality={100}
-                            priority={index === 0}
-                        />
-                    </motion.div>
-                ))}
+                <AnimatePresence>
+                    {slides.map((slide, index) => (
+                        <motion.div
+                            key={index}
+                            className="absolute w-full h-full bg-gradient-to-r from-black/50 to-transparent"
+                            initial={{ opacity: 0, scale: 1.1 }} // Initial state: fade out and slightly zoomed
+                            animate={{
+                                opacity: index === currentIndex ? 1 : 0,
+                                scale: index === currentIndex ? 1 : 1.06,
+                            }}
+                            exit={{ opacity: 0, scale: 1.1 }} // Fade and zoom out on exit
+                            transition={{
+                                opacity: { duration: 2 },
+                                scale: { type: 'spring', stiffness: 300, damping: 20 }, // Smooth spring animation for scaling
+                            }}
+                        >
+                            <Image
+                                src={slide.src}
+                                alt={slide.alt}
+                                fill
+                                style={{ objectFit: 'cover' }}
+                                quality={100}
+                                priority={index === 0}
+                            />
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
             </div>
+
             {/* Carousel Indicators */}
             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                 {slides.map((_, index) => (

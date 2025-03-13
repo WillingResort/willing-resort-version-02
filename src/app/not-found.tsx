@@ -13,7 +13,7 @@ const NotFound: React.FC = () => {
         <React.Fragment>
             <div
                 className="relative min-h-[70vh] bg-cover bg-center flex flex-col justify-end"
-                style={{ backgroundImage: 'url(https://willingresort.github.io/assests-hosting/images/rooms/luxury-01.jpg)', backgroundRepeat: 'no-repeat' }}
+                style={{ backgroundImage: 'url(https://willingresort.github.io/assests-hosting/images/NZ7_4832.jpg)', backgroundRepeat: 'no-repeat' }}
             >
                 <div className="hidden sm:block absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/50 to-transparent"></div>
                 {/* Hide on small screens */}

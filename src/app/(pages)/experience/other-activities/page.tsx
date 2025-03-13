@@ -62,7 +62,7 @@ const otherActivities: Activity[] = [
     },
     {
         title: "Ceremonial Procession of the Monk Body",
-        imageUrl: "https://willingresort.github.io/assests-hosting/images/culture-and-conservation/other04.svg",
+        imageUrl: "https://willingresort.github.io/assests-hosting/images/festivals-and-religious-events/IMG_6499.JPG",
         imagePosition: "left",
         description: "Witness one of Trongsa's most magnificent spiritual spectacles - the ceremonial movement of the monk body between their seasonal residences. This grand procession occurs twice annually according to the lunar calendar.",
         duration: "1 day",
