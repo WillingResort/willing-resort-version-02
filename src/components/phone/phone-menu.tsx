@@ -137,7 +137,7 @@ const PhoneMenu: React.FC = () => {
                                         <Link
                                             key={subIdx}
                                             href={subItem.href}
-                                            className="block py-2 text-sm text-gray-600"
+                                            className="block py-2 text-sm text-gray-600 uppercase"
                                             onClick={handleMenuClick}
                                         >
                                             {subItem.label}

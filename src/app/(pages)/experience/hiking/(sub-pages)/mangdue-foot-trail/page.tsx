@@ -30,16 +30,7 @@ const ExperiencePage: React.FC = () => {
             />
             <div className="container mb-6 sm:mb-[100px] mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
                 <div className='flex flex-wrap w-full sm:flex-row'>
-                    <div className="w-full sm:w-[60%] sm:pr-[40px]">
-                        <Image
-                            className="h-[500px] w-full object-cover object-center"
-                            src='https://sonamwangchuk77jr.github.io/image-hosting/images/adventures-and-activities/DSC6286.jpg'
-                            alt='hike'
-                            width={800}
-                            height={500}
-                        />
-                    </div>
-                    <div className="w-full sm:w-[40%] flex flex-col justify-center">
+                    <div className="w-full sm:w-[70%] flex flex-col justify-center">
                         <h1 className='text-lg font-[600]'>Mangdue Foot Trail (Between Dzong and Thugma Drag, Viewpoint)</h1>
                         <p>(Duration: 2 hours each way)</p>
                         <div className='mt-5'>

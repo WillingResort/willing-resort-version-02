@@ -2,13 +2,35 @@ import HeroSlider from "@/components/home/hero-slider";
 import WaterFallCafeCard from "@/components/home/waterfall-cafe-card";
 import Button from "@/components/ui/button";
 import FeatureSection from "@/components/ui/feature-section";
+import Image from "next/image";
 
 export async function generateMetadata() {
   return {
-    title: "Home || Willing Resort",
-    description: "Welcome to Willing Resort, an enchanting getaway in central Bhutan.",
+    title: "Willing Resort",
+    description: "Escape to Willing Resort, a peaceful getaway in central Bhutan. Enjoy breathtaking landscapes, warm Bhutanese hospitality, and authentic cultural experiences for a truly unforgettable stay.",
+    openGraph: {
+      title: "Willing Resort - Trongsa",
+      description: "Discover the beauty of Bhutan at Willing Resort. Nestled in the heart of central Bhutan, our resort offers tranquility, scenic views, and authentic cultural experiences.",
+      url: "https://www.willingbhutan.com",
+      type: "website",
+      images: [
+        {
+          url: "https://willingresort.github.io/assests-hosting/homepage/slider-07.jpg",
+          width: 1200,
+          height: 630,
+          alt: "Willing Resort in central Bhutan",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Willing Resort | Serene Retreat in Central Bhutan",
+      description: "Escape to Willing Resort, a tranquil getaway in central Bhutan with breathtaking views and authentic cultural experiences.",
+      images: ["https://willingresort.github.io/assests-hosting/homepage/slider-07.jpg"],
+    },
   };
 }
+
 
 export default function HomePage() {
   return (
@@ -33,7 +55,15 @@ export default function HomePage() {
       </div>
 
       {/* Explore Willing Resort  */}
-      <div className="container mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px]  mx-auto px-4 h-[100vh] bg-[url('https://willingresort.github.io/assests-hosting/images/explore-willing.jpg')] bg-cover bg-bottom flex flex-col justify-end relative">
+      <div className="container bg-gradient-to-r from-black/50 to-transparent mt-5 sm:mt-[100px] md:mt-[100px] lg:mt-[100px] mx-auto px-4 h-[100vh] flex flex-col justify-end relative">
+        <Image
+          src="https://willingresort.github.io/assests-hosting/images/explore-willing.jpg"
+          alt="Explore Willing Resort"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="bottom"
+          priority
+        />
       </div>
       <div className="container mx-auto mt-8 flex flex-col items-center">
         <h1 className="font-normal text-heading tracking-heading uppercase text-center">

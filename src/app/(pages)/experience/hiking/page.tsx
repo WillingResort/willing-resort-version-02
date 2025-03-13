@@ -44,7 +44,7 @@ const ExperiencePage: React.FC = () => {
                     description={`
                         The Singye Thang hike starts at Dorji Goenba (2760m) and ascends steeply to 3950m. Historically used by yak herders, it offers breathtaking views of Gangkar Phunsum. The trail features alpine flora and descends to Willing Resort. Ideal hiking months: October to April.
                         `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3822.jpeg"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/place.jpg"
                     buttonText='Explore More'
                     hrefLink='/experience/hiking/singye-thang'
                 />
@@ -82,7 +82,7 @@ const ExperiencePage: React.FC = () => {
                     description={`
                         This rewarding trek near Trongsa climbs 930m to 3,410m, passing forests, sacred sites, and yak camps. Highlights include Dozhong Goemba, Singaythang’s lion-shaped rock, and stunning views of Gangkhar Puensum. Best visited in spring for flowers or autumn for clear skies.
                         `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_0983.jpeg"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3822.jpeg"
                     buttonText='Explore More'
                     hrefLink='/experience/hiking/trongsa-sightseeing'
                 />

@@ -48,9 +48,6 @@ const WellnessPage: React.FC = () => {
 
                         {/* Content Section */}
                         <div className="w-full sm:w-[40%] md:w-[40%] lg:w-[40%] p-6 sm:border-y-1.5 sm:border-y-textColor flex flex-col justify-center ">
-                            <h1 className="font-normal text-center text-heading tracking-heading text-secondaryColor uppercase">
-                                SPA Treatments at Willing Resort
-                            </h1>
                             <p className="mt-5">
                                 Our wellness sanctuary combines ancient Bhutanese traditions with modern therapies.
                                 Set against the backdrop of natural mountain views, the spa offers a complete journey

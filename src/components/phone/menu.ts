@@ -5,8 +5,9 @@ export const menuItems = [
   { label: 'WELLNESS', href: '/wellness', hasIcon: true,submenu: false },
   { label: 'EXPERIENCES', href: '#', hasIcon: true ,submenu: true,
     subLabel: [
+      { label: 'Fortress & Palaces', href: '/experience/fortress-palaces' },
       { label: 'HIKING', href: '/experience/hiking' },
-      { label: 'VISIT TO VILLAGES', href: '/experience/villages' },
+      { label: 'Community villages', href: '/experience/villages' },
       { label: 'OTHER ACTIVITIES', href: '/experience/other-activities' },
   ],
   },

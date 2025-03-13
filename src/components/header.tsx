@@ -10,9 +10,10 @@ const linkItems = [
     {
         text: 'EXPERIENCES', href: '#', subMenu: true, hasIcon: true,
         submenu: [
-            { label: 'Hiking', link: '/experience/hiking/' },
-            { label: 'Visit to Villages', link: '/experience/villages/' },
-            { label: 'Other Activities', link: '/experience/other-activities/' },
+            { label: 'Fortress & Palaces', link: '/experience/fortress-palaces' },
+            { label: 'Hiking', link: '/experience/hiking' },
+            { label: 'Community villages', link: '/experience/villages' },
+            { label: 'Other Activities', link: '/experience/other-activities' },
         ],
     },
     { text: 'FESTIVALS', href: '/festivals', subMenu: false, hasIcon: true },

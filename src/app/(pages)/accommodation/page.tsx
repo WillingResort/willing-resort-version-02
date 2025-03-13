@@ -27,7 +27,7 @@ const AccomodationPage: React.FC = () => {
                     { label: "Accommodation" },
                 ]}
             />
-            <div className="container mt-5 mx-auto px-4">
+            {/* <div className="container mt-5 mx-auto px-4">
                 <div className="flex flex-col gap-4 justify-center items-center">
                     <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
                         Discover Tranquility and Elegance
@@ -41,7 +41,7 @@ const AccomodationPage: React.FC = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className='mt-6 sm:mt-[100px]'>
                 <SuiteFeatureSection
                     title="Junior Suite"

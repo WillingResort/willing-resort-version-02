@@ -17,7 +17,7 @@ const otherActivities: Activity[] = [
     {
         title: "Dye textiles",
         imagePosition: "left",
-        imageUrl: "https://willingresort.github.io/assests-hosting/images/culture-and-conservation/madala-arts.svg",
+        imageUrl: "https://bhutan-textiles.com/wp-content/uploads/2022/08/Diapositive4.jpeg",
         description: "Immerse yourself in the ancient art of textile dyeing at the Tarayana Foundation's nettle textile centre in Langthel, Trongsa. Here, local artisans keep alive the traditional dyeing processes using naturally available ingredients. Watch and learn as they create vibrant colors from symplocos (zim), stic lac (jatsoe), madder (tsoe), and buckwheat flour. Guests are invited to participate in the dyeing process, creating their own naturally dyed textiles under expert guidance.",
     },
     {
@@ -54,18 +54,11 @@ const otherActivities: Activity[] = [
         description: "Enhance your stay with a private dining experience in the wilderness surrounding Willing Resort. Choose between lunch or dinner served in the pristine forest setting, where traditional flavors meet natural splendor.",
     },
     {
-        title: "Astrology reading",
+        title: "Feng Shui Consultantion",
         imageUrl: "https://willingresort.github.io/assests-hosting/images/culture-and-conservation/other03.svg",
         imagePosition: "left",
         description: "Step into a world where ancient wisdom meets modern living as Mr. Pema Namgyel introduces the principles of Feng Shui and the art of living in harmony with Mother Nature. This enlightening session offers practical insights into creating a balanced and harmonious environment.",
         additionalDetails: "During your session, discover your personality traits, receive guidance on life decisions, and explore your untapped potential.",
-    },
-    {
-        title: "Choechong",
-        imagePosition: "right",
-        imageUrl: "https://willingresort.github.io/assests-hosting/images/culture-and-conservation/other01.svg",
-        description: "Experience the rare opportunity to consult with a medium oracle, a sacred tradition in Bhutanese spirituality. The oracle offers prophetic insights and celestial wisdom through traditional religious rituals and sermons.",
-        duration: "2 hours",
     },
     {
         title: "Ceremonial Procession of the Monk Body",
@@ -116,7 +109,7 @@ const otherActivities: Activity[] = [
     },
     {
         title: "Prayer Hoisting Ceremony at Willing Lhakhang",
-        imageUrl: "https://willingresort.github.io/assests-hosting/images/culture-and-conservation/lhama.jpg",
+        imageUrl: "https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_3164.jpeg",
         imagePosition: "right",
         description: "Join the local community and monks in the sacred practice of hoisting prayer flags at Willing Monastery. These colorful banners, believed to carry blessings on the wind, are hoisted during this meaningful cultural and spiritual activity.",
         duration: "2 hours",
@@ -159,65 +152,7 @@ const PlaceToVisitPage: React.FC = () => {
                 </div>
             ))}
 
-            <div className='mt-6 sm:mt-[10px]'>
-                <FeatureSection
-                    title="Trongsa Dzong"
-                    imagePosition='left'
-                    description={`
-                        Trongsa Dzong overlooks the rushing Mangde Chhu River and is considered the most impressive dzong in Bhutan. 
-                        Erected in 1644, its unique architecture stands out from a distance. The vast complex spans multiple levels and 
-                        features a maze of courtyards, passageways, and corridors. You’d be surprised to know that there are 25 temples in Trongsa Dzong!
-                        `}
-                    imageUrl="https://live.staticflickr.com/4874/45712564602_5a993fb85d_b.jpg"
-                />
-            </div>
-            <div className='mt-6 sm:mt-[100px]'>
-                <FeatureSection
-                    title="Ta Dzong"
-                    imagePosition='right'
-                    description={`
-                        Initially built to protect Trongsa Dzong from rebels, this building now 
-                        serves as the National Museum of Bhutan. It houses a wide range of valuable 
-                        treasures from the Wangchuck Dynasty, providing visitors with a fascinating glimpse 
-                        into the country's rich history. The museum's collections include a variety of objects, 
-                        such as ancient diamonds and sculptures of deities, all elegantly displayed for viewing.
-                        `}
-                    imageUrl="https://www.bhutanpeacefultour.com/wp-content/uploads/2019/02/Ta-Dzong-Bhutan-National-museum-at-Paro-the-old-capital-of-Bhutan.jpg"
-                />
-            </div>
-            <div className="container mx-auto mt-8 flex flex-col items-center">
-                <h1 className="font-normal text-heading tracking-heading uppercase text-center">
-                    Threupang Palace
-                </h1>
-                <p className="w-[90%] mt-5 text-center">
-                    The palace was constructed by Jigme Wangchuck, the Second King. It was the
-                    birthplace of Jigme Dorji Wangchuck, the Third King, in 1928. Nowadays, the Fifth
-                    King stays here when he passes through Trongsa. The palace continues to be a symbol
-                    of the monarchy, and a testimony of the lifestyle that the Second and Third Kings had
-                    of changing valleys according to seasons. The palace is a modest two-story structure resembling
-                    a big house with a beautiful front courtyard with lush green lawn.
-                </p>
-            </div>
-            <div className='mt-6 sm:mt-[100px]'>
-                <FeatureSection
-                    title="Kinga Rabten"
-                    imagePosition='left'
-                    description={`
-                        This is one of three royal homes in central Trongsa, which is situated at an elevation of roughly 1,750 meters above the Mangde Chhu river on the north side of the valley. It was built in 1929 as the second King's winter residence. The trip will give you an idea of what life was like in Bhutan's early kingdom. On the way, you'll pass beneath the fertile rice paddies of the lower Mangde Chhu valley, Takse Goemba, and a massive waterfall.
-                        `}
-                    imageUrl="https://media1.thrillophilia.com/filestore/gg9ggmf81wxlen4cll560d6f6wdn_4963129388_dbb9797d17_k.jpg"
-                />
-            </div>
-            <div className='mt-6 mb-6 sm:mt-[100px] sm:mb-[100px]'>
-                <FeatureSection
-                    title="Karma Drubdey Nunnery"
-                    imagePosition='right'
-                    description={`
-                        The nunnery was established in 1968 by the esteemed scholar, teacher, and yogi Khenpo Tsultrim Gyamtsho Rinpoche. It is now home to approximately 127 Buddhist nuns who study and practice Buddhadharma in the Karma Kagyu tradition. Located on a hill and surrounded by mountains, the nunnery benefits from plenty of fresh air, making it an ideal setting for the nuns to study and retreat.
-                        `}
-                    imageUrl="https://www.holidify.com/images/cmsuploads/compressed/01-copy8-800x533_20190905162055.jpg"
-                />
-            </div>
+
         </React.Fragment>
     )
 }

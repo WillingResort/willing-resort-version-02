@@ -56,7 +56,7 @@ const SuiteFeatureSection: React.FC<SuiteFeatureSectionProps> = ({
 
                 {/* Image on the Right */}
                 {imagePosition === 'right' && (
-                    <div className="w-full sm:w-[70%] sm:pl-[60px">
+                    <div className="w-full sm:w-[70%] sm:pl-[60px]">
                         <Image
                             className={`h-[${imageHeight}] w-full object-cover ${objectPosition} bg-gradient-to-r from-black/50 to-transparent`}
                             src={imageUrl ?? '/default-image.jpg'}

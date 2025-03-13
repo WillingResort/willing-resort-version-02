@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "@/components/header";
 import PhoneMenu from "@/components/phone/phone-menu";
-import ChatBotWidget from "../bot/chatbot";
 import Footer from "../footer";
 import GlobalLoading from "@/app/loading";
 
@@ -11,14 +10,20 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const handleLoad = () => setLoading(false); // Hide loading when everything is loaded
-        if (document.readyState === "complete") {
-            handleLoad(); // If already loaded, remove loading immediately
-        } else {
-            window.addEventListener("load", handleLoad);
-        }
+        // Ensure we're working on the client side
+        if (typeof window !== "undefined") {
+            const handleLoad = () => setLoading(false); // Hide loading when everything is loaded
 
-        return () => window.removeEventListener("load", handleLoad);
+            if (document.readyState === "complete") {
+                handleLoad(); // If already loaded, remove loading immediately
+            } else {
+                window.addEventListener("load", handleLoad);
+            }
+
+            return () => {
+                window.removeEventListener("load", handleLoad);
+            };
+        }
     }, []);
 
     if (loading) {
@@ -38,7 +43,7 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
             </div>
 
             {children}
-            <ChatBotWidget />
+
             <Footer />
         </React.Fragment>
     );

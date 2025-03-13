@@ -1,12 +1,5 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import ClientLayout from "@/components/layout/client-layout";
-
-export const metadata: Metadata = {
-  title: "Willing Resort",
-  description:
-    "Willing Resort in Trongsa is truly an enchanting destination, nestled amidst the captivating landscape of central Bhutan.",
-};
 
 export default function RootLayout({
   children,
