@@ -15,7 +15,8 @@ const WaterFallCafeCard = () => {
                     <Button buttonText="Explore More" hrefLink="/waterfall-cafe" />
                 </div>
                 <div className="w-full sm:w-[70%] sm:pl-[60px]">
-                    <img className="h-[500px] w-[100%] bg-gradient-to-r from-black/50 to-transparent" style={{ objectFit: 'cover', objectPosition: 'bottom' }} src="https://willingresort.github.io/assests-hosting/images/cafe/DSC_3633.jpg" alt="water-fall image" />
+                    <img className="h-[500px] w-[100%] bg-gradient-to-r from-black/50 to-transparent" style={{ objectFit: 'cover', objectPosition: 'center' }}
+                        src="https://willingresort.github.io/assests-hosting/images/cafe/waterfallcafe.jpeg" alt="water-fall image" />
                 </div>
             </div>
         </div>
