@@ -38,7 +38,7 @@ const FortressPalacesPage: React.FC = () => {
                         Erected in 1644, its unique architecture stands out from a distance. The vast complex spans multiple levels and 
                         features a maze of courtyards, passageways, and corridors. You’d be surprised to know that there are 25 temples in Trongsa Dzong!
                         `}
-                    imageUrl="https://live.staticflickr.com/4874/45712564602_5a993fb85d_b.jpg"
+                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/IMG_1667.jpg"
                 />
             </div>
             <div className='mt-6 sm:mt-[100px]'>

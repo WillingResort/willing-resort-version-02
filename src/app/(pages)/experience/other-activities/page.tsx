@@ -129,11 +129,7 @@ const PlaceToVisitPage: React.FC = () => {
             <HeroBanner
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/events-activities/img-01.jpeg'
                 headingText='Bhutan’s Spiritual & Cultural Wonders - Trongsa'
-                bodyText={`
-                    Experience Bhutan’s rich culture at Willing Resort with oracle readings, Feng Shui, 
-                    and traditional crafts, and explore Trongsa’s historic sites, including Trongsa Dzong, 
-                    Ta Dzong Museum, and royal palaces
-                    `}
+                bodyText={``}
             />
             <Breadcrumb
                 items={[

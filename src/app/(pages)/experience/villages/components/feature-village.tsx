@@ -18,7 +18,7 @@ const FeatureVillageSection: React.FC<FeatureVillageSectionProps> = ({
 }) => {
 
     return (
-        <div className="container mx-auto px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
+        <div className="container mx-auto sm:mb-[70px] px-4 sm:px-[40px] md:px-[40px] lg:px-[70px]">
             <div className={`flex flex-wrap w-full ${imagePosition === 'right' ? 'flex-col-reverse sm:flex-row' : ''}`}>
                 {/* Image on the Left */}
                 {imagePosition === 'left' && (
