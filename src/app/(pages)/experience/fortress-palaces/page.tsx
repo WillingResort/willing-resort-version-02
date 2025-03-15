@@ -31,7 +31,7 @@ const FortressPalacesPage: React.FC = () => {
             />
             <div className='mt-6 sm:mt-[10px]'>
                 <FeatureSection
-                    title="Trongsa Dzong"
+                    title="Trongsa Dzong (Fortress)"
                     imagePosition='left'
                     description={`
                         Trongsa Dzong overlooks the rushing Mangde Chhu River and is considered the most impressive dzong in Bhutan. 
@@ -43,7 +43,7 @@ const FortressPalacesPage: React.FC = () => {
             </div>
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureSection
-                    title="Ta Dzong"
+                    title="Ta Dzong (Watch Tower)"
                     imagePosition='right'
                     description={`
                         Initially built to protect Trongsa Dzong from rebels, this building now 
@@ -52,7 +52,7 @@ const FortressPalacesPage: React.FC = () => {
                         into the country's rich history. The museum's collections include a variety of objects, 
                         such as ancient diamonds and sculptures of deities, all elegantly displayed for viewing.
                         `}
-                    imageUrl="https://www.bhutanpeacefultour.com/wp-content/uploads/2019/02/Ta-Dzong-Bhutan-National-museum-at-Paro-the-old-capital-of-Bhutan.jpg"
+                    imageUrl="https://live.staticflickr.com/8426/7864490328_93dae21336_b.jpg"
                 />
             </div>
             <div className="container mx-auto mt-8 flex flex-col items-center">
@@ -85,7 +85,7 @@ const FortressPalacesPage: React.FC = () => {
                     description={`
                         The nunnery was established in 1968 by the esteemed scholar, teacher, and yogi Khenpo Tsultrim Gyamtsho Rinpoche. It is now home to approximately 127 Buddhist nuns who study and practice Buddhadharma in the Karma Kagyu tradition. Located on a hill and surrounded by mountains, the nunnery benefits from plenty of fresh air, making it an ideal setting for the nuns to study and retreat.
                         `}
-                    imageUrl="https://www.holidify.com/images/cmsuploads/compressed/01-copy8-800x533_20190905162055.jpg"
+                    imageUrl="https://images.squarespace-cdn.com/content/v1/662675f81057bf5b98844eca/ebec7745-89d4-4206-9852-b02409c1a7d7/relocation_samcholing_main.jpg?format=1000w"
                 />
             </div>
         </React.Fragment>

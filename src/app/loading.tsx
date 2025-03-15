@@ -17,7 +17,7 @@ export default function GlobalLoading() {
                 </div>
             </div>
             <div className="mt-[100px]">
-                <h1 className="font-serif text-2xl">🥱 Please be patient while loading... 🔄</h1>
+                <h1 className="font-serif text-2xl">Please be patient while loading...</h1>
             </div>
         </div>
     );
