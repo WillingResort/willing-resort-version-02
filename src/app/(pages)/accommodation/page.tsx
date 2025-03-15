@@ -46,7 +46,7 @@ const AccomodationPage: React.FC = () => {
                     area='2 rooms 48 sqm 516 sq ft'
                     imagePosition='right'
                     imageHeight='600px'
-                    objectPosition='object-center'
+                    objectPosition='object-bottom'
                     description={`
                             Private balconies feature outdoor soaking tubs, perfectly positioned to 
                             take in the panoramic views of the valley and mountains, creating an intimate 

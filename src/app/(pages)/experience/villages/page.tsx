@@ -5,8 +5,8 @@ import FeatureVillageSection from './components/feature-village';
 
 export async function generateMetadata() {
     return {
-        title: "Visit to Villages || Willing Resort",
-        description: "Discover the rich history and breathtaking landscapes of Trongsa. Visit ancient dzongs, royal palaces, sacred monasteries, and traditional villages to experience Bhutan’s cultural heritage. Plan your journey today!",
+        title: "Visit to Villages | Willing Resort",
+        description: "Experience the charm of Bhutanese villages with Willing Resort. Explore traditional communities, engage with locals, and immerse yourself in the rich cultural heritage of Trongsa.",
     };
 }
 
