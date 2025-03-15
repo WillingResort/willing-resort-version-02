@@ -17,9 +17,9 @@ const AccomodationPage: React.FC = () => {
                 heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/rooms/luxury-01.jpg'
                 headingText='Luxurious Accommodation at Willing Resort'
                 bodyText={`
-                      Perched on a scenic hill, Willing Resort blends Bhutanese charm with modern
-                        comfort. Stay in one of 16 elegant suites and soak in breathtaking views of
-                        Trongsa Dzong, mountains, and the Mangdi River.
+                    Each suite in villas is architecturally unique and custom-designed with Bhutanese architecture. 
+                    All our suite rooms offer breathtaking views of the valley, including the landmark Fortress, 
+                    the Trongsa Dzong, the mountains and the Mangdi River.
                     `}
             />
             <Breadcrumb
@@ -27,21 +27,6 @@ const AccomodationPage: React.FC = () => {
                     { label: "Accommodation" },
                 ]}
             />
-            {/* <div className="container mt-5 mx-auto px-4">
-                <div className="flex flex-col gap-4 justify-center items-center">
-                    <h1 className="font-normal text-heading tracking-heading text-secondaryColor uppercase text-center">
-                        Discover Tranquility and Elegance
-                    </h1>
-                    <div className="flex flex-col justify-center items-center">
-                        <p className="w-[100%] sm:w-[60%] md:w-[60%] lg:w-[60%] text-center">
-                            Willing Resort spans more than 4 acres and was opened in the spring of 2023. The property features a main building and 5 suite villas sprawled atop a hill, overlooking the valley with 16 rooms attached with luxurious amenities.
-                            Each suite in villas is architecturally unique and custom-designed with Bhutanese architecture.
-                            All our suite rooms offer breathtaking views of the valley, including the landmark Fortress,
-                            the Trongsa Dzong, the mountains and the Mangdi River.
-                        </p>
-                    </div>
-                </div>
-            </div> */}
             <div className='mt-6 sm:mt-[100px]'>
                 <SuiteFeatureSection
                     title="Junior Suite"

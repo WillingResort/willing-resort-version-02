@@ -15,7 +15,7 @@ const ExperiencePage: React.FC = () => {
     return (
         <React.Fragment>
             <HeroBanner
-                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/dinning/dinning-03.JPG'
+                heroBannerBgImage='https://willingresort.github.io/assests-hosting/images/adventures-and-activities/place.jpg'
                 headingText='Explore Villages In Trongsa'
                 bodyText={`
                     The villages in Trongsa, each with its distinct history and cultural heritage, offer a 
@@ -28,20 +28,10 @@ const ExperiencePage: React.FC = () => {
                     { label: "Visit to villages" },
                 ]}
             />
-            <div className='mt-6 sm:mt-[10px]'>
-                <FeatureVillageSection
-                    title="Dozhong village- Dozhong Goemba monastery"
-                    imagePosition='left'
-                    description={`
-                        Dozhong village is about 15 km from Trongsa town. Here, you can visit Dozhong Goemba. "Dozhong" means "stone tub," referring to the bath used by the local female deity, Yulha Menmo Palden Dolma. This temple is linked to Lopen Tsultrim Tharchin, born in Tsangkha village in Tangsibi Gewog, Trongsa. He became a chopon (one with authority over offerings). 
-                        `}
-                    imageUrl="https://ogop.bt/wp-content/uploads/2021/10/Khangma-Marp-Red-Rice2.jpeg"
-                />
-            </div>
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureVillageSection
                     title="Yuling village - Yuling Lhakhang"
-                    imagePosition='right'
+                    imagePosition='left'
                     description={`
                         Initially built to protect Trongsa Dzong from rebels, this building now 
                         serves as the National Museum of Bhutan. It houses a wide range of valuable 
@@ -63,21 +53,11 @@ const ExperiencePage: React.FC = () => {
             <div className='mt-6 sm:mt-[100px]'>
                 <FeatureVillageSection
                     title="Korphu village - Korphu Lhakhang"
-                    imagePosition='left'
+                    imagePosition='right'
                     description={`
                         This village is about 1.5 hours' walking from Nabji village. 'Korphu' is derived from 'gour' meaning stone and 'pho' meaning cave, literally translating to "stone cave." Korphu village is the farthest gewog in Trongsa Dzongkhag, falling under Jigme Singye Wangchuck National Park. Korphu Lhakhang in the village is said to have been constructed in the 15th century, after being prophesied by the great tertoen (treasure discoverer) Pema Lingpa.
                         `}
                     imageUrl="https://static.wixstatic.com/media/118af4_a5eb8f7e19ca40e9b0021467e316723f~mv2.jpg/v1/fill/w_708,h_480,al_c,lg_1,q_80/118af4_a5eb8f7e19ca40e9b0021467e316723f~mv2.jpg"
-                />
-            </div>
-            <div className='mt-6 sm:mt-[100px] '>
-                <FeatureVillageSection
-                    title="Samcholing village - Samchoeling Palace"
-                    imagePosition='right'
-                    description={`
-                            The village is a 1.5-hour drive from Trongsa town along the highway. The origins of Samchoeling Palace are not entirely clear. Some believe the temple was initially built by a Lama from the Wangdu Choling family, while others attribute its construction to Jakar Dzongpon Chimi Dorji and his wife, Ashi Yeshe Chodren, the sister of the first King. They were known to spend their winters in this region. The palace features two chapels: the Dolma Lhakhang, which is used for performing daily rituals, and the Gonkhang, or chapel of the protective deities. This palace is also home to many sacred statues and paintings.
-                        `}
-                    imageUrl="https://willingresort.github.io/assests-hosting/images/adventures-and-activities/place.jpg"
                 />
             </div>
             <div className='mt-6 mb-6 sm:mt-[100px] sm:mb-[100px]'>

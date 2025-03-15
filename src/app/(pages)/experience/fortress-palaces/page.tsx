@@ -5,7 +5,7 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "Fortress & Tour || Willing Resort",
+        title: "Fortress & Palaces || Willing Resort",
         description: "Discover the rich history and cultural heritage of Trongsa, Bhutan. Explore iconic landmarks like Trongsa Dzong, Ta Dzong Museum, Threupang Palace, Kinga Rabten, and Karma Drubdey Nunnery. Experience royal legacies, ancient treasures, and serene spiritual retreats in one of Bhutan's most historic regions",
     };
 }
